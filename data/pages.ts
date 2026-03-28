@@ -1,295 +1,288 @@
 import type { CategoryPage, ComparisonPage, FaqItem } from "@/lib/types";
 
+const author = "Avery Collins, US Real Estate AI Research Desk";
+const updated = "March 2026";
+
 export const categoryPages: CategoryPage[] = [
   {
     pageType: "category",
     slug: "ai-tools-for-lead-generation",
-    title: "AI Tools for Real Estate Lead Generation (2026 Guide)",
+    title: "17 Best AI Tools for Real Estate Lead Generation (2026)",
     description:
-      "Compare the best AI tools for real estate lead generation in the US. Discover automation platforms for nurturing, qualifying, and converting leads faster.",
+      "Compare AI lead generation tools for US real estate agents. See pricing, key features, and automation workflows that improve speed-to-lead.",
     h1: "Best AI Tools for Real Estate Lead Generation",
-    intro:
-      "If your pipeline depends on fast response times, AI can handle first-touch conversations, lead scoring, and follow-up so no inquiry goes cold. These tools are top picks for agents and broker teams in the US.",
-    keywords: [
-      "AI tools for real estate agents",
-      "best AI tools for realtors",
-      "real estate lead generation AI"
-    ],
-    toolNames: [
-      "Structurely",
-      "Roof AI",
-      "Ylopo",
-      "Offrs",
-      "HubSpot AI",
-      "Follow Up Boss AI"
-    ],
+    introProblem: "Leads go cold fast when response time is slow and follow-up is inconsistent.",
+    introBenefit: "AI lead workflows qualify intent, automate outreach, and route hot leads faster.",
+    keywords: ["AI tools for real estate agents", "real estate lead generation AI", "best AI tools for realtors"],
+    toolNames: ["Structurely", "Roof AI", "Ylopo", "Offrs", "HubSpot AI", "Follow Up Boss AI"],
     tableHighlights: {
-      Structurely: "Two-way SMS and voice qualification",
-      "Roof AI": "24/7 website lead capture",
-      Ylopo: "Ad-to-appointment nurturing",
+      Structurely: "24/7 qualification by SMS and voice",
+      "Roof AI": "Website lead capture and routing",
+      Ylopo: "Ad-to-appointment nurture",
       Offrs: "Predictive seller targeting",
-      "HubSpot AI": "Scoring and CRM automation",
-      "Follow Up Boss AI": "Agent accountability workflows"
+      "HubSpot AI": "Lead scoring + follow-up",
+      "Follow Up Boss AI": "Team accountability workflows"
     },
-    faqs: [
-      {
-        question: "What is the best AI lead generation tool for solo agents?",
-        answer:
-          "Solo agents usually get the fastest ROI from tools with built-in nurture automation and simple CRM workflows, like Structurely or Follow Up Boss AI."
-      },
-      {
-        question: "Can AI replace ISA teams in real estate?",
-        answer:
-          "AI can handle first-response and basic qualification, but most teams still rely on humans for nuanced objections, negotiation, and relationship building."
-      },
-      {
-        question: "How quickly can I see ROI from lead-gen AI tools?",
-        answer:
-          "Most agents see measurable improvements within 30 to 90 days when they pair AI response automation with consistent human follow-up."
-      },
-      {
-        question: "Do these platforms integrate with Zillow and CRMs?",
-        answer:
-          "Many do. Check each vendor's native integrations or Zapier compatibility before purchase."
-      }
+    useCases: [
+      { title: "Instant lead response", description: "Reply to new inquiries in minutes, even after hours." },
+      { title: "Pipeline reactivation", description: "Re-engage stale contacts with AI-assisted outreach." },
+      { title: "Seller targeting", description: "Focus prospecting on homeowners with listing likelihood signals." },
+      { title: "ISA support", description: "Automate first-touch qualification and handoff." }
     ],
-    relatedSlugs: [
-      "ai-tools-for-cold-calling",
-      "ai-tools-for-real-estate-marketing",
-      "chatgpt-vs-claude-for-real-estate"
-    ]
+    faqs: [
+      { question: "What are the best AI tools for real estate lead generation?", answer: "Structurely, Roof AI, HubSpot AI, and Follow Up Boss AI are strong options for US teams." },
+      { question: "Which AI tool is best for speed-to-lead?", answer: "Structurely and Roof AI are top picks for instant response and qualification." },
+      { question: "Can AI replace ISA teams?", answer: "AI can handle first contact, but humans still close better in nuanced conversations." },
+      { question: "How soon can I see ROI?", answer: "Most teams see response-time improvement within weeks and conversion gains in 60 to 90 days." }
+    ],
+    relatedSlugs: ["ai-tools-for-crm", "ai-tools-for-cold-calling", "ai-tools-for-marketing", "chatgpt-vs-claude-for-real-estate"],
+    lastUpdated: updated,
+    author
   },
   {
     pageType: "category",
     slug: "ai-tools-for-property-description",
-    title: "AI Tools for Property Descriptions and Listing Copy",
+    title: "13 Best AI Tools for Real Estate Listing Copy (2026)",
     description:
-      "Find the best AI tools for writing property descriptions, MLS-friendly copy, and listing headlines that attract serious buyers.",
+      "Find AI tools for property descriptions and MLS-ready listing copy. Compare pricing and features for US real estate agents in 2026.",
     h1: "Best AI Tools for Property Listings and Descriptions",
-    intro:
-      "Great listing copy sells the lifestyle, not just the square footage. These AI tools help real estate agents write faster while keeping brand voice and compliance in mind.",
-    keywords: [
-      "AI for property listings",
-      "best AI tools for realtors",
-      "real estate listing description generator"
-    ],
-    toolNames: [
-      "Jasper",
-      "Copy.ai",
-      "ChatGPT",
-      "Claude",
-      "REimagineHome",
-      "Restb.ai"
-    ],
+    introProblem: "Listing copy often sounds repetitive and misses emotional hooks that drive inquiries.",
+    introBenefit: "AI copy tools speed drafting and improve quality with neighborhood and buyer-focused language.",
+    keywords: ["AI for property listings", "listing description generator", "best AI tools for realtors"],
+    toolNames: ["Jasper", "Copy.ai", "ChatGPT", "Claude", "REimagineHome", "Restb.ai"],
     tableHighlights: {
-      Jasper: "Brand voice templates for listings",
-      "Copy.ai": "Fast listing and ad copy workflows",
-      ChatGPT: "Flexible prompting for neighborhood context",
-      Claude: "Long-form, nuanced listing narratives",
-      REimagineHome: "Visual staging support for copy context",
-      "Restb.ai": "Auto-tag photos to enrich listing details"
+      Jasper: "Brand-safe listing narratives",
+      "Copy.ai": "Fast listing and ad variants",
+      ChatGPT: "Flexible prompt workflows",
+      Claude: "Polished long-form output",
+      REimagineHome: "Staging context for copy",
+      "Restb.ai": "Photo intelligence for listing details"
     },
-    faqs: [
-      {
-        question: "Can AI-generated listing descriptions be used directly in MLS?",
-        answer:
-          "Yes, but agents should review for Fair Housing language, factual accuracy, and local MLS policy before publishing."
-      },
-      {
-        question: "Which tool is better for luxury listings?",
-        answer:
-          "Jasper and Claude often perform better for premium tone and longer storytelling, especially with strong brand prompts."
-      },
-      {
-        question: "How do I avoid repetitive AI listing copy?",
-        answer:
-          "Feed each draft with property-specific details, target-buyer context, and neighborhood differentiators to keep copy unique."
-      },
-      {
-        question: "Can these tools help with ad headlines too?",
-        answer:
-          "Yes, most tools on this page also generate variants for social ads, email subject lines, and flyer copy."
-      }
+    useCases: [
+      { title: "Luxury listing copy", description: "Generate premium tone and lifestyle-focused narratives." },
+      { title: "MLS drafting at scale", description: "Draft multiple listing versions quickly, then review for compliance." },
+      { title: "Renovation storytelling", description: "Highlight upgrades and before/after value clearly." },
+      { title: "Audience-specific messaging", description: "Tailor copy for investors, first-time buyers, or relocators." }
     ],
-    relatedSlugs: [
-      "jasper-vs-copy-ai",
-      "ai-tools-for-social-media",
-      "chatgpt-vs-claude-for-real-estate"
-    ]
+    faqs: [
+      { question: "Which AI tool is best for listing descriptions?", answer: "Jasper and ChatGPT are popular; Claude is strong for polished long-form style." },
+      { question: "Can I publish AI listing copy directly to MLS?", answer: "Review for factual accuracy and fair housing compliance before publishing." },
+      { question: "How do I avoid generic AI copy?", answer: "Include concrete property facts, neighborhood details, and buyer persona context." },
+      { question: "Can these tools also write ad headlines?", answer: "Yes, most can create ad, flyer, and follow-up copy variants." }
+    ],
+    relatedSlugs: ["ai-tools-for-copywriting", "jasper-vs-copy-ai", "ai-tools-for-social-media", "chatgpt-vs-claude-for-real-estate"],
+    lastUpdated: updated,
+    author
   },
   {
     pageType: "category",
     slug: "ai-tools-for-real-estate-marketing",
-    title: "AI Tools for Real Estate Marketing Campaigns",
+    title: "15 Best AI Tools for Real Estate Marketing Campaigns (2026)",
     description:
-      "Explore AI marketing tools for real estate agents to build better ads, nurture sequences, and multi-channel campaigns.",
-    h1: "Best AI Tools for Real Estate Marketing",
-    intro:
-      "From social creatives to email campaigns, marketing AI helps teams launch faster and test more ideas without adding headcount.",
-    keywords: [
-      "AI tools for real estate agents",
-      "real estate marketing AI software",
-      "best AI tools for realtors"
-    ],
-    toolNames: [
-      "Jasper",
-      "Canva Magic Studio",
-      "AdCreative.ai",
-      "HighLevel AI",
-      "Mailchimp AI",
-      "Hootsuite OwlyWriter"
-    ],
+      "Discover AI marketing tools for real estate campaigns. Compare ad, social, and email automation platforms built for US agents and teams.",
+    h1: "Best AI Tools for Real Estate Marketing Campaigns",
+    introProblem: "Running campaigns across ads, email, and social is slow without dedicated marketing ops.",
+    introBenefit: "AI tools cut production time and improve campaign testing across channels.",
+    keywords: ["real estate marketing AI", "AI tools for real estate agents", "best AI tools for realtors"],
+    toolNames: ["Jasper", "Canva Magic Studio", "AdCreative.ai", "HighLevel AI", "Mailchimp AI", "Hootsuite OwlyWriter"],
     tableHighlights: {
-      Jasper: "Conversion-focused ad copy",
-      "Canva Magic Studio": "Quick listing graphics and reels assets",
-      "AdCreative.ai": "Performance-oriented ad concepts",
-      "HighLevel AI": "Nurture funnels and SMS automation",
-      "Mailchimp AI": "Email lifecycle campaign drafts",
-      "Hootsuite OwlyWriter": "Cross-channel social ideation"
+      Jasper: "Campaign copy framework",
+      "Canva Magic Studio": "Creative production for listing promos",
+      "AdCreative.ai": "Ad testing variants",
+      "HighLevel AI": "Nurture funnel automation",
+      "Mailchimp AI": "Email lifecycle campaigns",
+      "Hootsuite OwlyWriter": "Social planning workflows"
     },
-    faqs: [
-      {
-        question: "What is the best AI stack for real estate marketing teams?",
-        answer:
-          "A practical stack is one copy tool, one design/creative tool, and one automation CRM to cover content, creatives, and conversion."
-      },
-      {
-        question: "Do AI ad tools improve ROI immediately?",
-        answer:
-          "They usually improve testing speed first. ROI improves when teams review results weekly and iterate headlines, creatives, and audience segments."
-      },
-      {
-        question: "Can AI tools keep our brokerage brand voice consistent?",
-        answer:
-          "Yes. Save brand style guides and approved messaging prompts to keep output consistent across agents."
-      },
-      {
-        question: "Are these tools useful for open house campaigns?",
-        answer:
-          "Absolutely. Agents commonly use them for event pages, reminder emails, and social countdown posts."
-      }
+    useCases: [
+      { title: "Open house campaigns", description: "Coordinate social, SMS, and email reminders with one workflow." },
+      { title: "Farm area branding", description: "Publish consistent local content for long-term awareness." },
+      { title: "Listing ad bursts", description: "Launch high-speed creative and copy tests for new listings." },
+      { title: "Lead nurture", description: "Automate follow-up by stage from inquiry to appointment." }
     ],
-    relatedSlugs: [
-      "ai-tools-for-social-media",
-      "ai-tools-for-property-description",
-      "jasper-vs-copy-ai"
-    ]
+    faqs: [
+      { question: "What are the best AI marketing tools for real estate?", answer: "Jasper, Canva Magic Studio, HighLevel AI, and AdCreative.ai are common picks." },
+      { question: "Can AI improve real estate ad performance?", answer: "Yes, faster testing and better message variation usually improve CTR and conversion." },
+      { question: "Which tool is best for email nurture?", answer: "Mailchimp AI and HighLevel AI are strong options for lifecycle automation." },
+      { question: "Do these tools work for solo agents?", answer: "Yes, solo agents can start with one copy and one automation tool for fast impact." }
+    ],
+    relatedSlugs: ["ai-tools-for-marketing", "ai-tools-for-social-media", "ai-tools-for-copywriting", "ai-tools-for-lead-generation"],
+    lastUpdated: updated,
+    author
+  },
+  {
+    pageType: "category",
+    slug: "ai-tools-for-marketing",
+    title: "11 Best AI Tools for Realtor Marketing Automation (2026)",
+    description:
+      "Compare AI tools for realtor marketing automation. Learn which platforms handle social planning, ad creative, and nurture workflows best.",
+    h1: "Best AI Tools for Real Estate Marketing Automation",
+    introProblem: "Manual campaign execution causes delays and inconsistent branding across channels.",
+    introBenefit: "AI automation keeps campaigns consistent while reducing repetitive execution work.",
+    keywords: ["ai tools for marketing", "real estate marketing automation", "best AI tools for realtors"],
+    toolNames: ["HighLevel AI", "HubSpot AI", "Mailchimp AI", "AdCreative.ai", "Hootsuite OwlyWriter", "Buffer AI Assistant"],
+    tableHighlights: {
+      "HighLevel AI": "SMS + email funnel automation",
+      "HubSpot AI": "CRM-centered campaign orchestration",
+      "Mailchimp AI": "Behavior-triggered email drafts",
+      "AdCreative.ai": "Fast ad creative testing",
+      "Hootsuite OwlyWriter": "Cross-channel planning",
+      "Buffer AI Assistant": "Caption and scheduling support"
+    },
+    useCases: [
+      { title: "Agent content calendars", description: "Pre-plan monthly posts and email touchpoints by persona." },
+      { title: "Retargeting sequences", description: "Trigger ad and nurture flows from listing engagement signals." },
+      { title: "Database segmentation", description: "Classify contacts and launch stage-based campaigns." },
+      { title: "Performance optimization", description: "Shift spend to campaigns with better conversion indicators." }
+    ],
+    faqs: [
+      { question: "What is the best AI tool for marketing automation?", answer: "HighLevel AI and HubSpot AI are strong for CRM-connected workflows." },
+      { question: "Can AI run both email and SMS campaigns?", answer: "Yes, several platforms support multi-channel triggers and automated sequencing." },
+      { question: "How does AI improve consistency?", answer: "It standardizes templates, timing, and messaging across agents." },
+      { question: "Is automation too expensive for small teams?", answer: "Many teams start lean and expand only after proving ROI." }
+    ],
+    relatedSlugs: ["ai-tools-for-real-estate-marketing", "ai-tools-for-social-media", "ai-tools-for-crm", "ai-tools-for-lead-generation"],
+    lastUpdated: updated,
+    author
   },
   {
     pageType: "category",
     slug: "ai-tools-for-cold-calling",
-    title: "AI Tools for Real Estate Cold Calling and Follow-Up",
+    title: "12 Best AI Tools for Real Estate Cold Calling (2026)",
     description:
-      "Compare AI-powered call tools for real estate teams, including coaching, summaries, and conversion-focused conversation analytics.",
+      "Compare AI cold-calling tools for real estate agents. See the best software for script guidance, call coaching, summaries, and conversion workflows.",
     h1: "Best AI Tools for Real Estate Cold Calling",
-    intro:
-      "Cold calling still works when scripts, objection handling, and follow-up are consistent. These AI tools help agents improve call quality and close more appointments.",
-    keywords: [
-      "AI cold calling tools for real estate",
-      "best AI tools for realtors",
-      "real estate call automation AI"
-    ],
-    toolNames: [
-      "CallRail Conversation Intelligence",
-      "Gong",
-      "Dialpad Ai Voice",
-      "Balto",
-      "Air AI",
-      "ChatGPT"
-    ],
+    introProblem: "Cold calling results drop when scripts, coaching, and follow-up are inconsistent.",
+    introBenefit: "AI call tools improve talk tracks, summarize calls, and help teams convert more conversations.",
+    keywords: ["AI cold calling tools for real estate", "real estate call automation AI", "best AI tools for realtors"],
+    toolNames: ["CallRail Conversation Intelligence", "Gong", "Dialpad Ai Voice", "Balto", "Air AI", "ChatGPT"],
     tableHighlights: {
-      "CallRail Conversation Intelligence": "Inbound call summaries and tagging",
-      Gong: "Deal coaching and call analytics",
-      "Dialpad Ai Voice": "Real-time transcripts and insights",
-      Balto: "Script adherence in live calls",
-      "Air AI": "High-volume voice automation",
-      ChatGPT: "Role-play scripts and objection handling"
+      "CallRail Conversation Intelligence": "Call summaries and source tracking",
+      Gong: "Coaching and performance insights",
+      "Dialpad Ai Voice": "Live transcription and highlights",
+      Balto: "Real-time script support",
+      "Air AI": "Voice automation at scale",
+      ChatGPT: "Script generation and objection practice"
     },
-    faqs: [
-      {
-        question: "Can AI help me improve objection handling on calls?",
-        answer:
-          "Yes. Use AI to review call transcripts, surface patterns, and practice better responses before your next calling block."
-      },
-      {
-        question: "Is voice AI legal for outbound calls in the US?",
-        answer:
-          "It depends on federal and state regulations plus carrier rules. Always verify consent and disclosure requirements before deployment."
-      },
-      {
-        question: "Which tool is best for broker teams with call managers?",
-        answer:
-          "Teams with managers often prefer Gong or Dialpad for performance dashboards and coaching workflows."
-      },
-      {
-        question: "Can solo agents use these platforms affordably?",
-        answer:
-          "Yes, especially with entry plans like CallRail plus AI assistants for script prep and post-call analysis."
-      }
+    useCases: [
+      { title: "Expired/FSBO outreach", description: "Improve scripts and objection handling for better booking rates." },
+      { title: "Agent training", description: "Use call analytics to accelerate ramp-up for new agents." },
+      { title: "Manager coaching", description: "Flag missed moments and coach with summarized call insights." },
+      { title: "After-hours qualification", description: "Use voice automation to triage leads outside business hours." }
     ],
-    relatedSlugs: [
-      "ai-tools-for-lead-generation",
-      "chatgpt-vs-claude-for-real-estate",
-      "ai-tools-for-real-estate-marketing"
-    ]
+    faqs: [
+      { question: "Which AI tool is best for real estate cold calling?", answer: "Gong and Dialpad are strong for coaching; Balto is strong for live prompts." },
+      { question: "Can AI improve objection handling?", answer: "Yes, transcript insights and rehearsal workflows improve consistency." },
+      { question: "Is voice AI legal in the US?", answer: "Check federal and state consent rules before outbound automation." },
+      { question: "How do I measure ROI?", answer: "Track connect rate, appointments booked, and conversation-to-close conversion." }
+    ],
+    relatedSlugs: ["ai-tools-for-lead-generation", "ai-tools-for-crm", "ai-tools-for-marketing", "chatgpt-vs-claude-for-real-estate"],
+    lastUpdated: updated,
+    author
   },
   {
     pageType: "category",
     slug: "ai-tools-for-social-media",
-    title: "AI Tools for Real Estate Social Media Content",
+    title: "14 Best AI Tools for Realtor Social Media Growth (2026)",
     description:
-      "Discover the best AI tools for real estate social media content creation, scheduling, and short-form video production.",
+      "See the best AI tools for real estate social media. Compare captioning, short-form video, scheduling, and content planning for US agents.",
     h1: "Best AI Tools for Real Estate Social Media",
-    intro:
-      "Consistent posting builds trust long before a prospect fills out a form. These AI tools help you produce high-quality social content in less time.",
-    keywords: [
-      "AI tools for real estate agents",
-      "real estate social media AI",
-      "best AI tools for realtors"
-    ],
-    toolNames: [
-      "Canva Magic Studio",
-      "Buffer AI Assistant",
-      "Hootsuite OwlyWriter",
-      "OpusClip",
-      "Descript",
-      "ChatGPT"
-    ],
+    introProblem: "Agents struggle to post consistently across channels while managing clients and listings.",
+    introBenefit: "AI social tools speed ideation, editing, and scheduling so visibility stays high.",
+    keywords: ["real estate social media AI", "AI tools for real estate agents", "best AI tools for realtors"],
+    toolNames: ["Canva Magic Studio", "Buffer AI Assistant", "Hootsuite OwlyWriter", "OpusClip", "Descript", "ChatGPT"],
     tableHighlights: {
-      "Canva Magic Studio": "Design and copy in one workflow",
-      "Buffer AI Assistant": "Caption and scheduling support",
-      "Hootsuite OwlyWriter": "Platform-specific post ideas",
-      OpusClip: "Turn tours into short clips",
-      Descript: "Fast video editing with captions",
-      ChatGPT: "Hooks, CTAs, and content calendars"
+      "Canva Magic Studio": "Design and copy in one place",
+      "Buffer AI Assistant": "Caption writing and scheduling",
+      "Hootsuite OwlyWriter": "Cross-platform content ideas",
+      OpusClip: "Long-to-short video conversion",
+      Descript: "Text-based video editing",
+      ChatGPT: "Hooks, scripts, and CTA ideas"
     },
-    faqs: [
-      {
-        question: "What AI tool is best for listing reels?",
-        answer:
-          "Many agents combine Canva Magic Studio for visuals with OpusClip or Descript for video clipping and edits."
-      },
-      {
-        question: "How many posts per week should a realtor publish?",
-        answer:
-          "A consistent 3 to 5 posts weekly often outperforms sporadic bursts, especially when supported by local market insights."
-      },
-      {
-        question: "Can AI write social captions in my brand voice?",
-        answer:
-          "Yes. Save your tone and sample posts, then prompt AI with listing details and audience intent."
-      },
-      {
-        question: "Do these tools help with YouTube Shorts and TikTok?",
-        answer:
-          "Yes, clip-generation and auto-caption features are especially useful for short-form channels."
-      }
+    useCases: [
+      { title: "Weekly listing reels", description: "Turn one walkthrough into multiple short-form clips." },
+      { title: "Market education content", description: "Publish local updates that build trust over time." },
+      { title: "Open house countdowns", description: "Automate teaser posts and reminder content." },
+      { title: "Team brand consistency", description: "Use shared prompts and templates across agents." }
     ],
-    relatedSlugs: [
-      "ai-tools-for-real-estate-marketing",
-      "ai-tools-for-property-description",
-      "jasper-vs-copy-ai"
-    ]
+    faqs: [
+      { question: "What are the best AI social tools for realtors?", answer: "Canva, OpusClip, Descript, and ChatGPT cover most content workflows." },
+      { question: "Which AI tool is best for listing reels?", answer: "OpusClip and Descript are popular for creating and editing reel content." },
+      { question: "Can AI write captions in brand voice?", answer: "Yes, with examples and clear tone instructions, output becomes much more consistent." },
+      { question: "How often should agents post?", answer: "A steady cadence of 3 to 5 posts per week usually performs well." }
+    ],
+    relatedSlugs: ["ai-tools-for-marketing", "ai-tools-for-real-estate-marketing", "ai-tools-for-copywriting", "ai-tools-for-property-description"],
+    lastUpdated: updated,
+    author
+  },
+  {
+    pageType: "category",
+    slug: "ai-tools-for-crm",
+    title: "10 Best AI Tools for Real Estate CRM Automation (2026)",
+    description:
+      "Compare AI CRM tools for real estate teams. Improve follow-up, pipeline hygiene, and conversion with automation built for US agents.",
+    h1: "Best AI Tools for Real Estate CRM Automation",
+    introProblem: "Pipeline leaks happen when CRM updates and follow-ups depend on manual effort.",
+    introBenefit: "AI CRM tools automate prioritization and outreach so agents focus on high-intent leads.",
+    keywords: ["ai tools for real estate crm", "real estate crm automation", "best CRM AI for realtors"],
+    toolNames: ["HubSpot AI", "Follow Up Boss AI", "HighLevel AI", "Structurely", "Roof AI", "ChatGPT"],
+    tableHighlights: {
+      "HubSpot AI": "Smart lead scoring and suggestions",
+      "Follow Up Boss AI": "Follow-up accountability",
+      "HighLevel AI": "Unified funnel and CRM flows",
+      Structurely: "Qualification synced to CRM",
+      "Roof AI": "Website lead routing to agents",
+      ChatGPT: "Custom messaging and admin support"
+    },
+    useCases: [
+      { title: "Lead segmentation", description: "Auto-tag contacts by timeline and motivation." },
+      { title: "Pipeline cleanup", description: "Reduce stale records with reminder and activity triggers." },
+      { title: "Team SLA tracking", description: "Route leads by workload and monitor response compliance." },
+      { title: "Database reactivation", description: "Launch targeted outreach from dormant contact lists." }
+    ],
+    faqs: [
+      { question: "What is the best AI CRM tool for real estate?", answer: "HubSpot AI and Follow Up Boss AI are strong options depending on workflow needs." },
+      { question: "Can AI improve follow-up consistency?", answer: "Yes, it automates reminders, drafts, and prioritization by intent." },
+      { question: "How does AI lead scoring help?", answer: "It surfaces high-conversion opportunities so agents can focus time effectively." },
+      { question: "Does this work for solo agents?", answer: "Yes, solo agents can benefit quickly from automation and smarter prioritization." }
+    ],
+    relatedSlugs: ["ai-tools-for-lead-generation", "ai-tools-for-marketing", "ai-tools-for-cold-calling", "ai-tools-for-social-media"],
+    lastUpdated: updated,
+    author
+  },
+  {
+    pageType: "category",
+    slug: "ai-tools-for-copywriting",
+    title: "16 Best AI Copywriting Tools for Real Estate Agents (2026)",
+    description:
+      "Find the top AI copywriting tools for real estate agents. Compare listing copy, ad creative, and nurture email software for US teams.",
+    h1: "Best AI Copywriting Tools for Real Estate Agents",
+    introProblem: "Agents need high-volume copy for listings and marketing, but writing bottlenecks slow execution.",
+    introBenefit: "AI copywriting tools accelerate drafts and keep messaging consistent across channels.",
+    keywords: ["ai tools for copywriting", "real estate ai copywriting", "best AI tools for realtors"],
+    toolNames: ["Jasper", "Copy.ai", "ChatGPT", "Claude", "Mailchimp AI", "Hootsuite OwlyWriter"],
+    tableHighlights: {
+      Jasper: "Premium brand voice control",
+      "Copy.ai": "Fast headline and ad variants",
+      ChatGPT: "Flexible end-to-end prompts",
+      Claude: "Polished long-form writing",
+      "Mailchimp AI": "Email campaign copy generation",
+      "Hootsuite OwlyWriter": "Social caption drafting"
+    },
+    useCases: [
+      { title: "Listing + ad bundle", description: "Generate listing descriptions and ad copy in one workflow." },
+      { title: "Email nurture sequences", description: "Create follow-up series for buyer and seller pipelines." },
+      { title: "Open house promotion", description: "Draft invites, reminders, and post-event follow-up copy." },
+      { title: "Agent personal branding", description: "Publish consistent local authority content faster." }
+    ],
+    faqs: [
+      { question: "Which AI copy tool is best for real estate?", answer: "Jasper and ChatGPT are popular for flexibility; Copy.ai is strong for speed." },
+      { question: "Can AI tools write listing and email copy?", answer: "Yes, most support listing descriptions, emails, and ad variants." },
+      { question: "How do I keep copy unique?", answer: "Use specific property facts, audience context, and your tone guidelines in prompts." },
+      { question: "Are AI copy tools worth it for small teams?", answer: "Yes, they reduce production bottlenecks and improve publishing consistency." }
+    ],
+    relatedSlugs: ["ai-tools-for-property-description", "jasper-vs-copy-ai", "ai-tools-for-social-media", "ai-tools-for-marketing"],
+    lastUpdated: updated,
+    author
   }
 ];
 
@@ -297,210 +290,113 @@ export const comparisonPages: ComparisonPage[] = [
   {
     pageType: "comparison",
     slug: "jasper-vs-copy-ai",
-    title: "Jasper vs Copy.ai for Real Estate Agents",
+    title: "Jasper vs Copy.ai for Realtors: Which Tool Wins in 2026?",
     description:
-      "Compare Jasper vs Copy.ai for real estate copywriting, listing descriptions, and campaign messaging. See features, pros, cons, and final verdict.",
-    h1: "Jasper vs Copy.ai for Real Estate (2026)",
-    intro:
-      "Both Jasper and Copy.ai can speed up listing and marketing content, but they shine in different workflows. This side-by-side breakdown helps you choose the right fit for your team.",
-    keywords: [
-      "Jasper vs Copy.ai",
-      "best AI copywriter for real estate",
-      "AI for property listings"
-    ],
+      "Jasper vs Copy.ai for real estate agents. Compare features, pricing, use cases, and ROI to choose the best AI copywriting tool for your team.",
+    h1: "Jasper vs Copy.ai for Real Estate Agents",
+    introProblem: "Choosing the wrong copy tool can create extra editing work and inconsistent brand messaging.",
+    introBenefit: "This comparison helps you choose the best platform for listing copy, ads, and nurture campaigns.",
+    keywords: ["Jasper vs Copy.ai", "AI copywriter for real estate", "AI for property listings"],
     leftTool: "Jasper",
     rightTool: "Copy.ai",
+    alternativeToolNames: ["Jasper", "Copy.ai", "ChatGPT", "Claude", "Mailchimp AI"],
     comparisonRows: [
-      {
-        feature: "Listing Description Quality",
-        left: "Excellent brand voice control",
-        right: "Fast and clean first drafts",
-        winner: "left"
-      },
-      {
-        feature: "Workflow Templates",
-        left: "Strong campaign frameworks",
-        right: "Wide variety of quick templates",
-        winner: "tie"
-      },
-      {
-        feature: "Ease for New Agents",
-        left: "Moderate learning curve",
-        right: "Very beginner friendly",
-        winner: "right"
-      },
-      {
-        feature: "Long-Form Content",
-        left: "More consistent for long pages",
-        right: "Better for shorter copy blocks",
-        winner: "left"
-      },
-      {
-        feature: "Price-to-Value",
-        left: "Higher cost, higher control",
-        right: "Lower barrier for small teams",
-        winner: "right"
-      }
+      { feature: "Listing Description Quality", left: "Premium tone control", right: "Fast practical drafts", winner: "left" },
+      { feature: "Template Variety", left: "Campaign frameworks", right: "Quick-start templates", winner: "tie" },
+      { feature: "Ease for New Agents", left: "Moderate learning curve", right: "Beginner friendly", winner: "right" },
+      { feature: "Long-Form Consistency", left: "Strong", right: "Varies by prompt", winner: "left" },
+      { feature: "Entry Cost", left: "Higher", right: "Lower", winner: "right" }
     ],
-    leftPros: [
-      "Strong brand voice and style controls",
-      "Reliable for long-form pages and campaigns",
-      "Good collaboration for growing teams"
-    ],
-    leftCons: [
-      "Higher starting price",
-      "Setup takes longer to optimize",
-      "Can feel heavyweight for simple tasks"
-    ],
-    rightPros: [
-      "Very fast for daily listing and ad drafts",
-      "Simple interface for individual agents",
-      "Great template variety for quick wins"
-    ],
-    rightCons: [
-      "Less brand control for advanced teams",
-      "Long-form consistency can vary",
-      "May require heavier editing for premium listings"
-    ],
+    leftPros: ["Great brand control", "Strong long-form quality", "Good for team governance"],
+    leftCons: ["Higher cost", "Needs setup time", "Can be heavy for simple tasks"],
+    rightPros: ["Very fast drafts", "Easy onboarding", "Excellent template speed"],
+    rightCons: ["Less advanced brand control", "Long-form can vary", "May need more manual polish"],
     verdict:
-      "Choose Jasper if your brokerage needs consistent brand voice across many campaigns. Choose Copy.ai if speed, simplicity, and lower upfront cost matter most.",
-    faqs: [
-      {
-        question: "Is Jasper better than Copy.ai for luxury listings?",
-        answer:
-          "Jasper usually offers better control for tone and premium storytelling, which can be useful for luxury inventory."
-      },
-      {
-        question: "Can I use both tools together?",
-        answer:
-          "Yes. Some teams use Copy.ai for first drafts and Jasper for final polish and campaign standardization."
-      },
-      {
-        question: "Which is better for solo realtors?",
-        answer:
-          "Copy.ai is often easier for solo agents who need quick output with minimal setup."
-      }
+      "Choose Jasper for strict brand consistency. Choose Copy.ai for speed and simplicity in day-to-day agent workflows.",
+    useCases: [
+      { title: "Luxury campaigns", description: "Jasper often fits better for premium brand voice." },
+      { title: "High-volume daily drafts", description: "Copy.ai is strong for rapid listing and ad output." },
+      { title: "New agent onboarding", description: "Copy.ai usually gets teams productive faster." },
+      { title: "Brokerage-wide standards", description: "Jasper often wins for centralized style controls." }
     ],
-    relatedSlugs: [
-      "ai-tools-for-property-description",
-      "ai-tools-for-real-estate-marketing",
-      "chatgpt-vs-claude-for-real-estate"
-    ]
+    faqs: [
+      { question: "Is Jasper better than Copy.ai for real estate?", answer: "Jasper usually wins on brand control; Copy.ai often wins on speed." },
+      { question: "Which tool is better for listing descriptions?", answer: "Both are good, but Jasper often produces stronger long-form polish." },
+      { question: "Which is more affordable for solo realtors?", answer: "Copy.ai is usually easier to adopt at lower cost." },
+      { question: "Can I use both tools together?", answer: "Yes, many teams use Copy.ai for drafts and Jasper for final refinement." }
+    ],
+    relatedSlugs: ["ai-tools-for-copywriting", "ai-tools-for-property-description", "ai-tools-for-marketing", "chatgpt-vs-claude-for-real-estate"],
+    lastUpdated: updated,
+    author
   },
   {
     pageType: "comparison",
     slug: "chatgpt-vs-claude-for-real-estate",
-    title: "ChatGPT vs Claude for Real Estate Agents",
+    title: "ChatGPT vs Claude for Real Estate Agents (2026 Comparison)",
     description:
-      "ChatGPT vs Claude for real estate agents: compare content quality, market analysis workflows, and day-to-day productivity for US teams.",
-    h1: "ChatGPT vs Claude for Real Estate Agents (2026)",
-    intro:
-      "ChatGPT and Claude are both strong general AI assistants, but they differ in style and workflow strengths. Use this breakdown to pick the one that fits your day-to-day operations.",
-    keywords: [
-      "ChatGPT vs Claude for real estate",
-      "AI tools for real estate agents",
-      "best AI assistant for realtors"
-    ],
+      "ChatGPT vs Claude for real estate agents: compare listing copy, market analysis, follow-up writing, and day-to-day productivity for US teams.",
+    h1: "ChatGPT vs Claude for Real Estate Agents",
+    introProblem: "Agents need one AI assistant for copy, communication, and analysis, but strengths vary by workflow.",
+    introBenefit: "Use this guide to choose the model that best fits your team's day-to-day real estate execution.",
+    keywords: ["ChatGPT vs Claude for real estate", "best AI assistant for realtors", "AI tools for real estate agents"],
     leftTool: "ChatGPT",
     rightTool: "Claude",
+    alternativeToolNames: ["ChatGPT", "Claude", "Jasper", "Copy.ai", "HubSpot AI"],
     comparisonRows: [
-      {
-        feature: "Prompt Flexibility",
-        left: "Highly adaptable across tasks",
-        right: "Strong structured responses",
-        winner: "left"
-      },
-      {
-        feature: "Long Document Handling",
-        left: "Good with chunked workflows",
-        right: "Excellent context retention",
-        winner: "right"
-      },
-      {
-        feature: "Content Speed",
-        left: "Very fast draft generation",
-        right: "Fast with thoughtful tone",
-        winner: "tie"
-      },
-      {
-        feature: "Client Communication Tone",
-        left: "Great for concise outreach",
-        right: "Great for nuanced explanations",
-        winner: "right"
-      },
-      {
-        feature: "Creative Marketing Ideation",
-        left: "Strong for campaign brainstorming",
-        right: "Strong for messaging refinement",
-        winner: "left"
-      }
+      { feature: "Daily Content Speed", left: "Very fast", right: "Fast + detailed", winner: "left" },
+      { feature: "Long-Form Context", left: "Strong", right: "Excellent", winner: "right" },
+      { feature: "Prompt Flexibility", left: "Highly adaptable", right: "Structured style", winner: "left" },
+      { feature: "Client Communication Nuance", left: "Clear + concise", right: "Polished + nuanced", winner: "right" },
+      { feature: "Campaign Ideation", left: "High variety", right: "High refinement", winner: "left" }
     ],
-    leftPros: [
-      "Excellent breadth across listing, marketing, and ops tasks",
-      "Very flexible prompt patterns for agents",
-      "Strong ecosystem and integrations"
-    ],
-    leftCons: [
-      "Output quality depends heavily on prompt quality",
-      "Can be overly concise by default",
-      "Needs guardrails for consistent team use"
-    ],
-    rightPros: [
-      "Great for long-form and nuanced client messaging",
-      "Often produces polished first drafts",
-      "Useful for analysis-heavy workflows"
-    ],
-    rightCons: [
-      "May be slower to iterate for rapid brainstorming",
-      "Fewer preset workflows for some teams",
-      "Requires clear instructions to stay concise"
-    ],
+    leftPros: ["Great speed", "Flexible prompts", "Strong everyday breadth"],
+    leftCons: ["Quality varies with prompts", "Needs style guardrails", "Can be too brief by default"],
+    rightPros: ["Excellent long-form quality", "Strong context handling", "Polished communication drafts"],
+    rightCons: ["Can be slower for rapid ideation", "Needs concise instruction", "Fewer quick-start templates"],
     verdict:
-      "Pick ChatGPT for high-volume daily production and ideation. Pick Claude if your team values long-form quality, context depth, and polished communication drafts.",
-    faqs: [
-      {
-        question: "Which is better for writing listing descriptions quickly?",
-        answer:
-          "ChatGPT is often faster for high-volume listing drafts, while Claude can be stronger for polished long-form narratives."
-      },
-      {
-        question: "Which tool handles market report summaries better?",
-        answer:
-          "Claude is often preferred for structured, detailed summaries when handling larger documents."
-      },
-      {
-        question: "Do I need both ChatGPT and Claude?",
-        answer:
-          "Many teams start with one. Add the second only if you need specialized workflows that your first tool cannot cover efficiently."
-      }
+      "Choose ChatGPT for speed and range. Choose Claude for context-heavy writing and polished long-form communication.",
+    useCases: [
+      { title: "Bulk listing and outreach", description: "ChatGPT often wins for high-volume daily production." },
+      { title: "Market reports", description: "Claude often performs better for long, structured summaries." },
+      { title: "Team prompt libraries", description: "Both work well with standardized brokerage templates." },
+      { title: "Hybrid workflow", description: "Use ChatGPT for drafts and Claude for final long-form polish." }
     ],
-    relatedSlugs: [
-      "ai-tools-for-property-description",
-      "ai-tools-for-lead-generation",
-      "jasper-vs-copy-ai"
-    ]
+    faqs: [
+      { question: "Which is better for listing descriptions: ChatGPT or Claude?", answer: "ChatGPT is faster for volume; Claude often provides more polished long-form tone." },
+      { question: "Is Claude better for market report summaries?", answer: "Often yes, especially for detailed or longer context-heavy reports." },
+      { question: "Can real estate teams use both ChatGPT and Claude?", answer: "Yes, many teams combine both for speed plus quality control." },
+      { question: "Which is easier for new agents?", answer: "ChatGPT is usually easier for fast daily use." }
+    ],
+    relatedSlugs: ["ai-tools-for-copywriting", "ai-tools-for-property-description", "ai-tools-for-lead-generation", "jasper-vs-copy-ai"],
+    lastUpdated: updated,
+    author
   }
 ];
 
 export const homeFaqs: FaqItem[] = [
   {
-    question: "What is the difference between AI tools and agentic AI in real estate?",
+    question: "What are the best AI tools for real estate agents in the US?",
     answer:
-      "AI tools usually handle single tasks such as writing or image generation, while agentic AI coordinates multi-step workflows like lead qualification, routing, and follow-up."
+      "The strongest stacks combine lead generation AI, CRM automation, listing copy tools, and social media workflow tools."
   },
   {
-    question: "Should small brokerages start with custom AI development?",
+    question: "Which AI tool is best for real estate lead generation?",
     answer:
-      "Most small teams should begin with proven SaaS tools, then move toward custom orchestration once they have stable workflows and clear ROI metrics."
+      "Structurely, Roof AI, HubSpot AI, and Follow Up Boss AI are top options for speed-to-lead and nurture consistency."
   },
   {
-    question: "How do I reduce risk when using AI for listings and contracts?",
+    question: "Can AI help realtors close more deals?",
     answer:
-      "Use a human-in-the-loop review process for compliance-sensitive outputs, especially pricing, legal disclosures, and contract-adjacent communication."
+      "Yes, AI can improve response speed, message quality, and follow-up consistency across the full funnel."
   },
   {
-    question: "How long does it take to see ROI from AI in real estate?",
+    question: "How much do AI tools for real estate agents cost in 2026?",
     answer:
-      "Teams commonly see operational improvements in 1 to 3 months, with broader revenue impact often visible in 6 to 12 months when adoption is disciplined."
+      "Most tools start from about $15 to $100 per month, while enterprise platforms may require custom pricing."
+  },
+  {
+    question: "Are AI tools useful for solo real estate agents?",
+    answer:
+      "Yes, solo agents often get quick wins from one AI copy tool plus one CRM or lead automation platform."
   }
 ];

@@ -5,6 +5,11 @@ type ToolCardProps = {
 };
 
 export default function ToolCard({ tool }: ToolCardProps) {
+  const keyFeatures =
+    tool.keyFeatures && tool.keyFeatures.length > 0
+      ? tool.keyFeatures
+      : ["AI-assisted workflow", "Faster execution", "Agent productivity gains"];
+
   return (
     <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
       <div className="mb-3 inline-flex w-fit rounded-full bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-700">
@@ -12,6 +17,15 @@ export default function ToolCard({ tool }: ToolCardProps) {
       </div>
       <h3 className="font-heading text-xl font-bold text-slate-950">{tool.name}</h3>
       <p className="mt-3 text-sm leading-6 text-slate-600">{tool.description}</p>
+      <p className="mt-3 text-sm text-slate-700">
+        <span className="font-semibold">Best for:</span> {tool.bestFor ?? "Real estate automation"}
+      </p>
+      <h4 className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-900">Key Features</h4>
+      <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-slate-700">
+        {keyFeatures.slice(0, 3).map((feature) => (
+          <li key={feature}>{feature}</li>
+        ))}
+      </ul>
       <p className="mt-4 text-sm font-semibold text-slate-900">Pricing: {tool.pricing}</p>
       <div className="mt-auto flex gap-3 pt-6">
         <a

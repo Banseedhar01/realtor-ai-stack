@@ -9,9 +9,9 @@ import { allPages, getTopTools } from "@/lib/content";
 import { buildBreadcrumbSchema, buildFaqSchema, buildMetadata, buildToolListSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Best AI Tools for Real Estate Agents (2026)",
+  title: "10 Best AI Tools for Real Estate Agents in the US (2026)",
   description:
-    "Explore top AI tools and agentic AI solutions for real estate agents in the US. Compare market trends, implementation options, costs, and best-fit tools.",
+    "Compare the best AI tools for real estate agents in the US. See top software for lead generation, CRM automation, marketing, and property listings.",
   path: "/",
   keywords: [
     "AI tools for real estate agents",
@@ -119,8 +119,9 @@ export default function HomePage() {
   const topTools = getTopTools(10);
   const comparisonRows = topTools.map((tool) => [
     tool.name,
+    tool.bestFor ?? "Real estate operations",
     tool.pricing,
-    categoryLabelMap[tool.category] ?? "General real estate AI support"
+    tool.keyFeatures?.[0] ?? categoryLabelMap[tool.category] ?? "General real estate AI support"
   ]);
 
   const linkCards = [...categoryPages, ...comparisonPages].map((page) => ({
@@ -150,6 +151,9 @@ export default function HomePage() {
           US brokerages and teams choose what to implement first, how much to budget, and where to
           expect measurable ROI.
         </p>
+        <div className="mt-3 text-sm text-slate-300">
+          Last updated: March 2026 | Author: Avery Collins, US Real Estate AI Research Desk
+        </div>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/ai-tools-for-lead-generation"
@@ -242,10 +246,40 @@ export default function HomePage() {
         </p>
         <div className="mt-6">
           <ComparisonTable
-            headers={["Tool", "Pricing", "Best Use"]}
+            headers={["Tool", "Best For", "Pricing", "Key Feature"]}
             rows={comparisonRows}
             caption="AI tools for real estate agents: side-by-side comparison"
           />
+        </div>
+      </section>
+
+      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 className="font-heading text-3xl font-bold text-slate-950">Real-World Use Cases</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <article className="rounded-xl border border-slate-200 p-4">
+            <h3 className="font-semibold text-slate-900">Lead Response Automation</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Broker teams use AI assistants to respond to leads in minutes and route by location or budget.
+            </p>
+          </article>
+          <article className="rounded-xl border border-slate-200 p-4">
+            <h3 className="font-semibold text-slate-900">Listing Content Production</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Agents generate MLS drafts, ad variants, and email follow-up copy in one workflow.
+            </p>
+          </article>
+          <article className="rounded-xl border border-slate-200 p-4">
+            <h3 className="font-semibold text-slate-900">CRM Follow-Up Consistency</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              AI workflows keep contact records active and trigger reminders before opportunities go cold.
+            </p>
+          </article>
+          <article className="rounded-xl border border-slate-200 p-4">
+            <h3 className="font-semibold text-slate-900">Social Media at Scale</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Teams repurpose one property tour into multiple posts, reels, and localized captions.
+            </p>
+          </article>
         </div>
       </section>
 

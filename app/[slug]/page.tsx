@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ComparisonTable from "@/components/ComparisonTable";
 import FAQ from "@/components/FAQ";
+import PageTrust from "@/components/PageTrust";
 import RelatedTools from "@/components/RelatedTools";
 import SeoHead from "@/components/SeoHead";
 import ToolCard from "@/components/ToolCard";
@@ -46,41 +47,85 @@ const renderComparisonContent = (page: ComparisonPage) => {
     notFound();
   }
 
-  const comparisonRows = page.comparisonRows.map((row) => [
+  const directRows = page.comparisonRows.map((row) => [
     row.feature,
     row.left,
     row.right,
     row.winner === "tie" ? "Tie" : row.winner === "left" ? page.leftTool : page.rightTool
   ]);
 
+  const alternatives = getToolsByNames(page.alternativeToolNames);
+  const alternativesRows = alternatives.map((tool) => [
+    tool.name,
+    tool.bestFor ?? "Real estate operations",
+    tool.pricing,
+    tool.keyFeatures?.[0] ?? "AI-assisted workflow"
+  ]);
+
   return (
     <>
       <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
         <h2 className="font-heading text-2xl font-bold text-slate-950">Feature Comparison</h2>
-        <p className="mt-3 text-slate-600">
-          Side-by-side scoring based on real estate use cases like listing copy, nurture campaigns,
-          and day-to-day agent workflows.
+        <p className="mt-2 text-slate-600">
+          Compare strengths by the tasks that matter most to US real estate teams.
         </p>
-        <div className="mt-6">
+        <div className="mt-5">
           <ComparisonTable
             headers={["Feature", page.leftTool, page.rightTool, "Winner"]}
-            rows={comparisonRows}
-            caption={`${page.leftTool} vs ${page.rightTool} comparison table`}
+            rows={directRows}
+            caption={`${page.leftTool} vs ${page.rightTool}`}
           />
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-heading text-2xl font-bold text-slate-950">Top Tools in This Category</h2>
+        <p className="mt-2 text-slate-600">
+          If you want alternatives beyond this head-to-head, these tools are the most relevant next options.
+        </p>
+        <div className="mt-5 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {alternatives.map((tool) => (
+            <ToolCard key={tool.name} tool={tool} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-heading text-2xl font-bold text-slate-950">
+          Tool Comparison Table for Real Estate Teams
+        </h2>
+        <div className="mt-4">
+          <ComparisonTable
+            headers={["Tool", "Best For", "Pricing", "Key Feature"]}
+            rows={alternativesRows}
+            caption="Tool | Best for | Pricing | Key feature"
+          />
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-heading text-2xl font-bold text-slate-950">Real-World Use Cases</h2>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {page.useCases.map((useCase) => (
+            <article key={useCase.title} className="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 className="font-semibold text-slate-900">{useCase.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{useCase.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="mt-10 grid gap-6 lg:grid-cols-2">
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
           <h2 className="font-heading text-2xl font-bold text-slate-950">{page.leftTool} Pros & Cons</h2>
-          <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-accent-600">Pros</h3>
-          <ul className="mt-3 list-inside list-disc space-y-2 text-sm text-slate-700">
+          <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-accent-600">Pros</h3>
+          <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-slate-700">
             {page.leftPros.map((pro) => (
               <li key={pro}>{pro}</li>
             ))}
           </ul>
-          <h3 className="mt-6 text-sm font-bold uppercase tracking-wide text-rose-600">Cons</h3>
-          <ul className="mt-3 list-inside list-disc space-y-2 text-sm text-slate-700">
+          <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-rose-600">Cons</h3>
+          <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-slate-700">
             {page.leftCons.map((con) => (
               <li key={con}>{con}</li>
             ))}
@@ -97,14 +142,14 @@ const renderComparisonContent = (page: ComparisonPage) => {
 
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
           <h2 className="font-heading text-2xl font-bold text-slate-950">{page.rightTool} Pros & Cons</h2>
-          <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-accent-600">Pros</h3>
-          <ul className="mt-3 list-inside list-disc space-y-2 text-sm text-slate-700">
+          <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-accent-600">Pros</h3>
+          <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-slate-700">
             {page.rightPros.map((pro) => (
               <li key={pro}>{pro}</li>
             ))}
           </ul>
-          <h3 className="mt-6 text-sm font-bold uppercase tracking-wide text-rose-600">Cons</h3>
-          <ul className="mt-3 list-inside list-disc space-y-2 text-sm text-slate-700">
+          <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-rose-600">Cons</h3>
+          <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-slate-700">
             {page.rightCons.map((con) => (
               <li key={con}>{con}</li>
             ))}
@@ -120,9 +165,9 @@ const renderComparisonContent = (page: ComparisonPage) => {
         </article>
       </section>
 
-      <section className="mt-10 rounded-2xl border border-primary-100 bg-primary-50 p-6">
+      <section className="mt-10 rounded-2xl border border-primary-200 bg-primary-50 p-6">
         <h2 className="font-heading text-2xl font-bold text-slate-950">Final Verdict</h2>
-        <p className="mt-3 text-slate-700">{page.verdict}</p>
+        <p className="mt-2 text-slate-700">{page.verdict}</p>
       </section>
     </>
   );
@@ -136,6 +181,7 @@ export default function DynamicSeoPage({ params }: PageProps) {
   }
 
   const relatedPages = getRelatedPages(page.relatedSlugs);
+
   const breadcrumbs = [
     { name: "Home", path: "/" },
     { name: page.pageType === "comparison" ? "Comparisons" : "Guides", path: "/" },
@@ -154,8 +200,9 @@ export default function DynamicSeoPage({ params }: PageProps) {
     const tools = getToolsByNames(page.toolNames);
     const rows = tools.map((tool) => [
       tool.name,
+      tool.bestFor ?? "Real estate operations",
       tool.pricing,
-      page.tableHighlights[tool.name] ?? "Real estate workflow support"
+      page.tableHighlights[tool.name] ?? tool.keyFeatures?.[0] ?? "AI-assisted workflow"
     ]);
 
     schemaBlocks.push(buildToolListSchema(page.h1, tools, `/${page.slug}`));
@@ -164,18 +211,32 @@ export default function DynamicSeoPage({ params }: PageProps) {
       <>
         <SeoHead schemas={schemaBlocks} />
         <Breadcrumbs items={breadcrumbs} />
+
         <header className="max-w-4xl">
-          <h1 className="font-heading text-3xl font-extrabold text-slate-950 sm:text-5xl">
-            {page.h1}
-          </h1>
-          <p className="mt-4 text-lg leading-8 text-slate-600">{page.intro}</p>
+          <h1 className="font-heading text-3xl font-extrabold text-slate-950 sm:text-5xl">{page.h1}</h1>
+          <p className="mt-4 text-lg leading-8 text-slate-600">{page.introProblem}</p>
+          <p className="mt-3 text-lg leading-8 text-slate-700">{page.introBenefit}</p>
+          <PageTrust lastUpdated={page.lastUpdated} author={page.author} />
         </header>
 
-        <section className="mt-10">
-          <h2 className="font-heading text-2xl font-bold text-slate-950">Top Tools</h2>
+        <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h2 className="font-heading text-2xl font-bold text-slate-950">
+            Why AI Matters for This Real Estate Workflow
+          </h2>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">Common Agent Pain Points</h3>
           <p className="mt-2 text-slate-600">
-            Explore 5 to 10 proven options and use the pricing plus use-case table to shortlist
-            your best fit quickly.
+            US agents usually struggle with response speed, repetitive manual work, and inconsistent message quality.
+          </p>
+          <h3 className="mt-4 text-lg font-semibold text-slate-900">Where AI Improves Results</h3>
+          <p className="mt-2 text-slate-600">
+            With the right setup, AI improves consistency, shortens execution time, and increases qualified conversations.
+          </p>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="font-heading text-2xl font-bold text-slate-950">Top AI Tools</h2>
+          <p className="mt-2 text-slate-600">
+            These tools are commonly used by US agents and brokerage teams for this workflow.
           </p>
           <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {tools.map((tool) => (
@@ -185,13 +246,25 @@ export default function DynamicSeoPage({ params }: PageProps) {
         </section>
 
         <section className="mt-10">
-          <h2 className="font-heading text-2xl font-bold text-slate-950">Tool Comparison Table</h2>
+          <h2 className="font-heading text-2xl font-bold text-slate-950">Comparison Table</h2>
           <div className="mt-4">
             <ComparisonTable
-              headers={["Tool", "Pricing", "Best For"]}
+              headers={["Tool", "Best For", "Pricing", "Key Feature"]}
               rows={rows}
-              caption={`${page.h1} comparison`}
+              caption="Tool | Best for | Pricing | Key feature"
             />
+          </div>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="font-heading text-2xl font-bold text-slate-950">Real-World Use Cases</h2>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {page.useCases.map((useCase) => (
+              <article key={useCase.title} className="rounded-xl border border-slate-200 bg-white p-5">
+                <h3 className="font-semibold text-slate-900">{useCase.title}</h3>
+                <p className="mt-2 text-sm text-slate-600">{useCase.description}</p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -204,23 +277,22 @@ export default function DynamicSeoPage({ params }: PageProps) {
         </section>
 
         <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-          <h2 className="font-heading text-2xl font-bold text-slate-950">Keep Comparing</h2>
+          <h2 className="font-heading text-2xl font-bold text-slate-950">Next Step for Your Team</h2>
           <p className="mt-2 text-slate-600">
-            Need a deeper decision? Explore our side-by-side comparisons built for real estate
-            teams.
+            Shortlist 2 tools, run a 14-day pilot, and compare response time plus conversion metrics.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
-              href="/jasper-vs-copy-ai"
-              className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary-500 hover:text-primary-700"
+              href="/ai-tools-for-lead-generation"
+              className="rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-700"
             >
-              Jasper vs Copy.ai
+              Explore Lead Gen Tools
             </Link>
             <Link
-              href="/chatgpt-vs-claude-for-real-estate"
+              href="/ai-tools-for-crm"
               className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary-500 hover:text-primary-700"
             >
-              ChatGPT vs Claude
+              Compare AI CRM Tools
             </Link>
           </div>
         </section>
@@ -232,14 +304,20 @@ export default function DynamicSeoPage({ params }: PageProps) {
     <>
       <SeoHead schemas={schemaBlocks} />
       <Breadcrumbs items={breadcrumbs} />
+
       <header className="max-w-4xl">
         <h1 className="font-heading text-3xl font-extrabold text-slate-950 sm:text-5xl">{page.h1}</h1>
-        <p className="mt-4 text-lg leading-8 text-slate-600">{page.intro}</p>
+        <p className="mt-4 text-lg leading-8 text-slate-600">{page.introProblem}</p>
+        <p className="mt-3 text-lg leading-8 text-slate-700">{page.introBenefit}</p>
+        <PageTrust lastUpdated={page.lastUpdated} author={page.author} />
       </header>
+
       <div className="mt-10">{renderComparisonContent(page)}</div>
+
       <section className="mt-10">
         <FAQ items={page.faqs} />
       </section>
+
       <section className="mt-10">
         <RelatedTools items={relatedPages} />
       </section>
