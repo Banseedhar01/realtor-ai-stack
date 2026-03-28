@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { FaqItem, Tool } from "@/lib/types";
 
-const DEFAULT_BASE_URL = "https://realestate-ai-tools.example";
+const DEFAULT_BASE_URL = "https://realtor-ai-stack.vercel.app";
 
 type MetadataInput = {
   title: string;
