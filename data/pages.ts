@@ -35,7 +35,7 @@ export const categoryPages: CategoryPage[] = [
       { question: "Can AI replace ISA teams?", answer: "AI can handle first contact, but humans still close better in nuanced conversations." },
       { question: "How soon can I see ROI?", answer: "Most teams see response-time improvement within weeks and conversion gains in 60 to 90 days." }
     ],
-    relatedSlugs: ["ai-tools-for-crm", "ai-tools-for-cold-calling", "ai-tools-for-marketing", "chatgpt-vs-claude-for-real-estate"],
+    relatedSlugs: ["ai-tools-for-crm", "ai-tools-for-cold-calling", "ai-tools-for-marketing", "jasper-vs-copy-ai"],
     lastUpdated: updated,
     author
   },
@@ -70,7 +70,7 @@ export const categoryPages: CategoryPage[] = [
       { question: "How do I avoid generic AI copy?", answer: "Include concrete property facts, neighborhood details, and buyer persona context." },
       { question: "Can these tools also write ad headlines?", answer: "Yes, most can create ad, flyer, and follow-up copy variants." }
     ],
-    relatedSlugs: ["ai-tools-for-copywriting", "jasper-vs-copy-ai", "ai-tools-for-social-media", "chatgpt-vs-claude-for-real-estate"],
+    relatedSlugs: ["ai-tools-for-copywriting", "jasper-vs-copy-ai", "ai-tools-for-social-media", "ai-tools-for-marketing"],
     lastUpdated: updated,
     author
   },
@@ -175,7 +175,7 @@ export const categoryPages: CategoryPage[] = [
       { question: "Is voice AI legal in the US?", answer: "Check federal and state consent rules before outbound automation." },
       { question: "How do I measure ROI?", answer: "Track connect rate, appointments booked, and conversation-to-close conversion." }
     ],
-    relatedSlugs: ["ai-tools-for-lead-generation", "ai-tools-for-crm", "ai-tools-for-marketing", "chatgpt-vs-claude-for-real-estate"],
+    relatedSlugs: ["ai-tools-for-lead-generation", "ai-tools-for-crm", "ai-tools-for-marketing", "jasper-vs-copy-ai"],
     lastUpdated: updated,
     author
   },
@@ -325,49 +325,7 @@ export const comparisonPages: ComparisonPage[] = [
       { question: "Which is more affordable for solo realtors?", answer: "Copy.ai is usually easier to adopt at lower cost." },
       { question: "Can I use both tools together?", answer: "Yes, many teams use Copy.ai for drafts and Jasper for final refinement." }
     ],
-    relatedSlugs: ["ai-tools-for-copywriting", "ai-tools-for-property-description", "ai-tools-for-marketing", "chatgpt-vs-claude-for-real-estate"],
-    lastUpdated: updated,
-    author
-  },
-  {
-    pageType: "comparison",
-    slug: "chatgpt-vs-claude-for-real-estate",
-    title: "ChatGPT vs Claude for Real Estate Agents (2026 Comparison)",
-    description:
-      "ChatGPT vs Claude for real estate agents: compare listing copy, market analysis, follow-up writing, and day-to-day productivity for US teams.",
-    h1: "ChatGPT vs Claude for Real Estate Agents",
-    introProblem: "Agents need one AI assistant for copy, communication, and analysis, but strengths vary by workflow.",
-    introBenefit: "Use this guide to choose the model that best fits your team's day-to-day real estate execution.",
-    keywords: ["ChatGPT vs Claude for real estate", "best AI assistant for realtors", "AI tools for real estate agents"],
-    leftTool: "ChatGPT",
-    rightTool: "Claude",
-    alternativeToolNames: ["ChatGPT", "Claude", "Jasper", "Copy.ai", "HubSpot AI"],
-    comparisonRows: [
-      { feature: "Daily Content Speed", left: "Very fast", right: "Fast + detailed", winner: "left" },
-      { feature: "Long-Form Context", left: "Strong", right: "Excellent", winner: "right" },
-      { feature: "Prompt Flexibility", left: "Highly adaptable", right: "Structured style", winner: "left" },
-      { feature: "Client Communication Nuance", left: "Clear + concise", right: "Polished + nuanced", winner: "right" },
-      { feature: "Campaign Ideation", left: "High variety", right: "High refinement", winner: "left" }
-    ],
-    leftPros: ["Great speed", "Flexible prompts", "Strong everyday breadth"],
-    leftCons: ["Quality varies with prompts", "Needs style guardrails", "Can be too brief by default"],
-    rightPros: ["Excellent long-form quality", "Strong context handling", "Polished communication drafts"],
-    rightCons: ["Can be slower for rapid ideation", "Needs concise instruction", "Fewer quick-start templates"],
-    verdict:
-      "Choose ChatGPT for speed and range. Choose Claude for context-heavy writing and polished long-form communication.",
-    useCases: [
-      { title: "Bulk listing and outreach", description: "ChatGPT often wins for high-volume daily production." },
-      { title: "Market reports", description: "Claude often performs better for long, structured summaries." },
-      { title: "Team prompt libraries", description: "Both work well with standardized brokerage templates." },
-      { title: "Hybrid workflow", description: "Use ChatGPT for drafts and Claude for final long-form polish." }
-    ],
-    faqs: [
-      { question: "Which is better for listing descriptions: ChatGPT or Claude?", answer: "ChatGPT is faster for volume; Claude often provides more polished long-form tone." },
-      { question: "Is Claude better for market report summaries?", answer: "Often yes, especially for detailed or longer context-heavy reports." },
-      { question: "Can real estate teams use both ChatGPT and Claude?", answer: "Yes, many teams combine both for speed plus quality control." },
-      { question: "Which is easier for new agents?", answer: "ChatGPT is usually easier for fast daily use." }
-    ],
-    relatedSlugs: ["ai-tools-for-copywriting", "ai-tools-for-property-description", "ai-tools-for-lead-generation", "jasper-vs-copy-ai"],
+    relatedSlugs: ["ai-tools-for-copywriting", "ai-tools-for-property-description", "ai-tools-for-marketing", "ai-tools-for-lead-generation"],
     lastUpdated: updated,
     author
   }

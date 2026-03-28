@@ -21,6 +21,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://realtor-ai-stack.vercel.app/ai-tools-for-marketing</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://realtor-ai-stack.vercel.app/ai-tools-for-cold-calling</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -31,12 +36,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://realtor-ai-stack.vercel.app/jasper-vs-copy-ai</loc>
+    <loc>https://realtor-ai-stack.vercel.app/ai-tools-for-crm</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://realtor-ai-stack.vercel.app/chatgpt-vs-claude-for-real-estate</loc>
+    <loc>https://realtor-ai-stack.vercel.app/ai-tools-for-copywriting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realtor-ai-stack.vercel.app/jasper-vs-copy-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

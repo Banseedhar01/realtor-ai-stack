@@ -139,7 +139,9 @@ export default function HomePage() {
   return (
     <>
       <SeoHead schemas={schemas} />
-      <section className="rounded-3xl bg-slate-950 p-8 text-white shadow-soft sm:p-12">
+      <section className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-900 p-8 text-white shadow-soft sm:p-12">
+        <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-20 bottom-0 h-44 w-44 rounded-full bg-accent-400/20 blur-3xl" />
         <p className="mb-3 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary-100">
           US Real Estate AI Playbook
         </p>
@@ -157,15 +159,15 @@ export default function HomePage() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/ai-tools-for-lead-generation"
-            className="inline-flex items-center rounded-lg bg-primary-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-primary-600"
+            className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-5 py-3 text-sm font-bold text-white transition hover:from-primary-600 hover:to-primary-700"
           >
             Explore Lead Gen Tools
           </Link>
           <Link
-            href="/chatgpt-vs-claude-for-real-estate"
+            href="/jasper-vs-copy-ai"
             className="inline-flex items-center rounded-lg border border-white/40 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"
           >
-            Compare ChatGPT vs Claude
+            Compare Jasper vs Copy.ai
           </Link>
         </div>
       </section>
@@ -180,7 +182,7 @@ export default function HomePage() {
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {marketStats.map((item) => (
-            <article key={item.label} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
+            <article key={item.label} className="rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-primary-300">
               <p className="font-heading text-3xl font-extrabold text-slate-950">{item.metric}</p>
               <h3 className="mt-2 text-sm font-semibold text-slate-900">{item.label}</h3>
               <p className="mt-2 text-sm text-slate-600">{item.context}</p>
@@ -189,7 +191,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+      <section className="mt-14 rounded-2xl border border-slate-200/90 bg-white/95 p-6 shadow-soft">
         <h2 className="font-heading text-3xl font-bold text-slate-950">
           The Strategic Shift in 2026
         </h2>
@@ -216,7 +218,7 @@ export default function HomePage() {
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {topAgenticSolutions.map((solution, index) => (
-            <article key={solution.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
+            <article key={solution.title} className="rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-primary-300">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-700">
                 Solution {index + 1}
               </p>

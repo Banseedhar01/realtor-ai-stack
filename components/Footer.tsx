@@ -14,29 +14,27 @@ const footerSections = [
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-slate-200 bg-white">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
+    <footer className="mt-20 border-t border-slate-800 bg-slate-950 text-slate-200">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
         <div>
-          <h2 className="font-heading text-xl font-bold text-slate-950">
-            AI Tools for Real Estate Agents
-          </h2>
-          <p className="mt-3 max-w-md text-sm text-slate-600">
-            Practical AI software recommendations for US realtors who want more leads, faster
-            marketing output, and better client communication.
+          <h2 className="font-heading text-xl font-bold text-white">AI Tools for Real Estate Agents</h2>
+          <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">
+            Practical AI software recommendations for US realtors focused on lead generation, listing
+            quality, and faster campaign execution.
           </p>
+          <div className="mt-5 inline-flex rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-semibold text-primary-200">
+            Updated for 2026 market workflows
+          </div>
         </div>
         {footerSections.map((section) => (
           <div key={section.title}>
-            <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-slate-900">
+            <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-slate-100">
               {section.title}
             </h3>
             <ul className="mt-3 space-y-2">
               {section.links.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-slate-600 transition hover:text-primary-600"
-                  >
+                  <Link href={link.href} className="text-sm text-slate-300 transition hover:text-primary-300">
                     {link.label}
                   </Link>
                 </li>
@@ -45,7 +43,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="border-t border-slate-100 py-4 text-center text-xs text-slate-500">
+      <div className="border-t border-slate-800 py-4 text-center text-xs text-slate-400">
         Copyright {new Date().getFullYear()} AI Realtor Stack. Built for educational comparisons.
       </div>
     </footer>

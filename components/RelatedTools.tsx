@@ -20,7 +20,6 @@ const keywordAnchorText: Record<string, string> = {
   "ai-tools-for-crm": "Review AI tools for real estate CRM workflows",
   "ai-tools-for-copywriting": "Find AI copywriting tools for real estate agents",
   "jasper-vs-copy-ai": "Read our Jasper vs Copy.ai comparison for real estate",
-  "chatgpt-vs-claude-for-real-estate": "Read our ChatGPT vs Claude guide for realtors"
 };
 
 export default function RelatedTools({ items }: RelatedToolsProps) {
