@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Manrope, Source_Sans_3 } from "next/font/google";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -18,6 +19,7 @@ const bodyFont = Source_Sans_3({
 });
 
 const baseUrl = getBaseUrl();
+const GA_MEASUREMENT_ID = "G-3JFXT25XC5";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -71,6 +73,18 @@ export default function RootLayout({
         <Navbar />
         <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-8">{children}</main>
         <Footer />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
