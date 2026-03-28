@@ -1,0 +1,177 @@
+[
+  {
+    "name": "ChatGPT",
+    "description": "Draft listing copy, client emails, and neighborhood summaries in minutes with custom prompts for US markets.",
+    "pricing": "Free plan, Plus from $20/mo",
+    "category": "general-ai-assistant",
+    "affiliateLink": "https://chatgpt.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Claude",
+    "description": "Strong for long-form market reports, compliance-friendly drafts, and nuanced buyer-seller communication.",
+    "pricing": "Free plan, Pro from $20/mo",
+    "category": "general-ai-assistant",
+    "affiliateLink": "https://claude.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Jasper",
+    "description": "Brand-safe AI copy platform for high-converting property descriptions and ad campaigns.",
+    "pricing": "Creator from $39/mo",
+    "category": "property-description",
+    "affiliateLink": "https://www.jasper.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Copy.ai",
+    "description": "Fast workflow templates for listing headlines, follow-up messages, and campaign copy at scale.",
+    "pricing": "Free trial, Starter from $49/mo",
+    "category": "property-description",
+    "affiliateLink": "https://www.copy.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Canva Magic Studio",
+    "description": "Create branded social posts, reels covers, and listing promo graphics without a design team.",
+    "pricing": "Free plan, Pro from $14.99/mo",
+    "category": "social-media",
+    "affiliateLink": "https://www.canva.com/magic-studio/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Descript",
+    "description": "Edit listing walkthrough videos by editing text, then auto-generate clips and captions.",
+    "pricing": "Free plan, Hobbyist from $16/mo",
+    "category": "social-media",
+    "affiliateLink": "https://www.descript.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "OpusClip",
+    "description": "Turn long property tours into short-form social clips optimized for engagement.",
+    "pricing": "Free plan, Starter from $15/mo",
+    "category": "social-media",
+    "affiliateLink": "https://www.opus.pro/?utm_source=realestate-guide"
+  },
+  {
+    "name": "HubSpot AI",
+    "description": "Automate lead scoring, outreach drafting, and CRM follow-up for real estate pipelines.",
+    "pricing": "Free tools, paid hubs from $20/mo",
+    "category": "lead-generation",
+    "affiliateLink": "https://www.hubspot.com/products/ai?utm_source=realestate-guide"
+  },
+  {
+    "name": "Structurely",
+    "description": "AI assistant built for real estate that qualifies inbound leads by SMS and voice.",
+    "pricing": "Custom pricing for teams",
+    "category": "lead-generation",
+    "affiliateLink": "https://www.structurely.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Ylopo",
+    "description": "Ad + AI nurture platform that helps agents convert website and ad traffic into appointments.",
+    "pricing": "Custom pricing",
+    "category": "lead-generation",
+    "affiliateLink": "https://www.ylopo.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Roof AI",
+    "description": "Conversation AI for real estate websites that captures and routes leads 24/7.",
+    "pricing": "Starter plans from $49/mo",
+    "category": "lead-generation",
+    "affiliateLink": "https://www.roof.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Follow Up Boss AI",
+    "description": "CRM with smart automation to keep lead follow-up consistent and conversion-focused.",
+    "pricing": "Plans from $69/user/mo",
+    "category": "lead-generation",
+    "affiliateLink": "https://www.followupboss.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "HighLevel AI",
+    "description": "All-in-one marketing automation with AI workflows for nurture funnels and SMS campaigns.",
+    "pricing": "Starter from $97/mo",
+    "category": "real-estate-marketing",
+    "affiliateLink": "https://www.gohighlevel.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "REimagineHome",
+    "description": "Generate virtual staging and redesign visuals to improve listing click-through rates.",
+    "pricing": "Pay-as-you-go credits",
+    "category": "property-description",
+    "affiliateLink": "https://www.reimaginehome.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Restb.ai",
+    "description": "Computer vision for auto-tagging property photos and enriching listing metadata.",
+    "pricing": "Custom API pricing",
+    "category": "property-description",
+    "affiliateLink": "https://www.restb.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Offrs",
+    "description": "Predictive analytics platform that identifies likely sellers before they list.",
+    "pricing": "Territory-based pricing",
+    "category": "lead-generation",
+    "affiliateLink": "https://www.offrs.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "CallRail Conversation Intelligence",
+    "description": "AI call summaries and keyword tracking for inbound lead calls and team coaching.",
+    "pricing": "Plans from $45/mo",
+    "category": "cold-calling",
+    "affiliateLink": "https://www.callrail.com/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Gong",
+    "description": "Revenue intelligence with call analysis, coaching cues, and deal-risk visibility.",
+    "pricing": "Custom pricing",
+    "category": "cold-calling",
+    "affiliateLink": "https://www.gong.io/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Dialpad Ai Voice",
+    "description": "Transcription, real-time assist, and post-call coaching for outbound prospecting teams.",
+    "pricing": "Standard from $27/user/mo",
+    "category": "cold-calling",
+    "affiliateLink": "https://www.dialpad.com/products/ai-voice/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Balto",
+    "description": "Real-time call guidance that helps agents stay on script and improve close rates.",
+    "pricing": "Custom pricing",
+    "category": "cold-calling",
+    "affiliateLink": "https://www.balto.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Air AI",
+    "description": "Voice AI agents that can handle high-volume inbound and outbound call workflows.",
+    "pricing": "Usage-based pricing",
+    "category": "cold-calling",
+    "affiliateLink": "https://www.air.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Buffer AI Assistant",
+    "description": "Generate social captions and optimize posting workflows for listing announcements.",
+    "pricing": "Free plan, Essentials from $6/channel/mo",
+    "category": "social-media",
+    "affiliateLink": "https://buffer.com/ai-assistant?utm_source=realestate-guide"
+  },
+  {
+    "name": "Hootsuite OwlyWriter",
+    "description": "AI social writer that creates captions and idea prompts for multiple channels.",
+    "pricing": "Professional from $99/mo",
+    "category": "real-estate-marketing",
+    "affiliateLink": "https://www.hootsuite.com/platform/owlywriter-ai?utm_source=realestate-guide"
+  },
+  {
+    "name": "AdCreative.ai",
+    "description": "Generate ad creatives and copy variants designed for higher click-through rates.",
+    "pricing": "Starter from $39/mo",
+    "category": "real-estate-marketing",
+    "affiliateLink": "https://www.adcreative.ai/?utm_source=realestate-guide"
+  },
+  {
+    "name": "Mailchimp AI",
+    "description": "AI-assisted email campaign creation for listing alerts, newsletters, and nurture sequences.",
+    "pricing": "Free plan, Essentials from $13/mo",
+    "category": "real-estate-marketing",
+    "affiliateLink": "https://mailchimp.com/features/ai-marketing-tools/?utm_source=realestate-guide"
+  }
+]
