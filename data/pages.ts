@@ -49,12 +49,12 @@ export const categoryPages: CategoryPage[] = [
     introProblem: "Listing copy often sounds repetitive and misses emotional hooks that drive inquiries.",
     introBenefit: "AI copy tools speed drafting and improve quality with neighborhood and buyer-focused language.",
     keywords: ["AI for property listings", "listing description generator", "best AI tools for realtors"],
-    toolNames: ["Jasper", "Copy.ai", "ChatGPT", "Claude", "REimagineHome", "Restb.ai"],
+    toolNames: ["Jasper", "Copy.ai", "REimagineHome", "Restb.ai", "Canva Magic Studio", "Mailchimp AI"],
     tableHighlights: {
       Jasper: "Brand-safe listing narratives",
       "Copy.ai": "Fast listing and ad variants",
-      ChatGPT: "Flexible prompt workflows",
-      Claude: "Polished long-form output",
+      "Canva Magic Studio": "Visual-first listing and caption support",
+      "Mailchimp AI": "Follow-up copy and listing email workflows",
       REimagineHome: "Staging context for copy",
       "Restb.ai": "Photo intelligence for listing details"
     },
@@ -65,7 +65,7 @@ export const categoryPages: CategoryPage[] = [
       { title: "Audience-specific messaging", description: "Tailor copy for investors, first-time buyers, or relocators." }
     ],
     faqs: [
-      { question: "Which AI tool is best for listing descriptions?", answer: "Jasper and ChatGPT are popular; Claude is strong for polished long-form style." },
+      { question: "Which AI tool is best for listing descriptions?", answer: "Jasper and Copy.ai are popular for listing workflows, while REimagineHome supports stronger visual storytelling." },
       { question: "Can I publish AI listing copy directly to MLS?", answer: "Review for factual accuracy and fair housing compliance before publishing." },
       { question: "How do I avoid generic AI copy?", answer: "Include concrete property facts, neighborhood details, and buyer persona context." },
       { question: "Can these tools also write ad headlines?", answer: "Yes, most can create ad, flyer, and follow-up copy variants." }
@@ -154,14 +154,14 @@ export const categoryPages: CategoryPage[] = [
     introProblem: "Cold calling results drop when scripts, coaching, and follow-up are inconsistent.",
     introBenefit: "AI call tools improve talk tracks, summarize calls, and help teams convert more conversations.",
     keywords: ["AI cold calling tools for real estate", "real estate call automation AI", "best AI tools for realtors"],
-    toolNames: ["CallRail Conversation Intelligence", "Gong", "Dialpad Ai Voice", "Balto", "Air AI", "ChatGPT"],
+    toolNames: ["CallRail Conversation Intelligence", "Gong", "Dialpad Ai Voice", "Balto", "Air AI", "HighLevel AI"],
     tableHighlights: {
       "CallRail Conversation Intelligence": "Call summaries and source tracking",
       Gong: "Coaching and performance insights",
       "Dialpad Ai Voice": "Live transcription and highlights",
       Balto: "Real-time script support",
       "Air AI": "Voice automation at scale",
-      ChatGPT: "Script generation and objection practice"
+      "HighLevel AI": "Outbound follow-up automations tied to call outcomes"
     },
     useCases: [
       { title: "Expired/FSBO outreach", description: "Improve scripts and objection handling for better booking rates." },
@@ -189,14 +189,14 @@ export const categoryPages: CategoryPage[] = [
     introProblem: "Agents struggle to post consistently across channels while managing clients and listings.",
     introBenefit: "AI social tools speed ideation, editing, and scheduling so visibility stays high.",
     keywords: ["real estate social media AI", "AI tools for real estate agents", "best AI tools for realtors"],
-    toolNames: ["Canva Magic Studio", "Buffer AI Assistant", "Hootsuite OwlyWriter", "OpusClip", "Descript", "ChatGPT"],
+    toolNames: ["Canva Magic Studio", "Buffer AI Assistant", "Hootsuite OwlyWriter", "OpusClip", "Descript", "AdCreative.ai"],
     tableHighlights: {
       "Canva Magic Studio": "Design and copy in one place",
       "Buffer AI Assistant": "Caption writing and scheduling",
       "Hootsuite OwlyWriter": "Cross-platform content ideas",
       OpusClip: "Long-to-short video conversion",
       Descript: "Text-based video editing",
-      ChatGPT: "Hooks, scripts, and CTA ideas"
+      "AdCreative.ai": "Conversion-oriented creative and angle testing"
     },
     useCases: [
       { title: "Weekly listing reels", description: "Turn one walkthrough into multiple short-form clips." },
@@ -205,7 +205,7 @@ export const categoryPages: CategoryPage[] = [
       { title: "Team brand consistency", description: "Use shared prompts and templates across agents." }
     ],
     faqs: [
-      { question: "What are the best AI social tools for realtors?", answer: "Canva, OpusClip, Descript, and ChatGPT cover most content workflows." },
+      { question: "What are the best AI social tools for realtors?", answer: "Canva, OpusClip, Descript, and Hootsuite OwlyWriter cover most social content workflows." },
       { question: "Which AI tool is best for listing reels?", answer: "OpusClip and Descript are popular for creating and editing reel content." },
       { question: "Can AI write captions in brand voice?", answer: "Yes, with examples and clear tone instructions, output becomes much more consistent." },
       { question: "How often should agents post?", answer: "A steady cadence of 3 to 5 posts per week usually performs well." }
@@ -224,14 +224,14 @@ export const categoryPages: CategoryPage[] = [
     introProblem: "Pipeline leaks happen when CRM updates and follow-ups depend on manual effort.",
     introBenefit: "AI CRM tools automate prioritization and outreach so agents focus on high-intent leads.",
     keywords: ["ai tools for real estate crm", "real estate crm automation", "best CRM AI for realtors"],
-    toolNames: ["HubSpot AI", "Follow Up Boss AI", "HighLevel AI", "Structurely", "Roof AI", "ChatGPT"],
+    toolNames: ["HubSpot AI", "Follow Up Boss AI", "HighLevel AI", "Structurely", "Roof AI", "Ylopo"],
     tableHighlights: {
       "HubSpot AI": "Smart lead scoring and suggestions",
       "Follow Up Boss AI": "Follow-up accountability",
       "HighLevel AI": "Unified funnel and CRM flows",
       Structurely: "Qualification synced to CRM",
       "Roof AI": "Website lead routing to agents",
-      ChatGPT: "Custom messaging and admin support"
+      Ylopo: "Ad lead sync and nurture scoring into CRM workflows"
     },
     useCases: [
       { title: "Lead segmentation", description: "Auto-tag contacts by timeline and motivation." },
@@ -259,12 +259,12 @@ export const categoryPages: CategoryPage[] = [
     introProblem: "Agents need high-volume copy for listings and marketing, but writing bottlenecks slow execution.",
     introBenefit: "AI copywriting tools accelerate drafts and keep messaging consistent across channels.",
     keywords: ["ai tools for copywriting", "real estate ai copywriting", "best AI tools for realtors"],
-    toolNames: ["Jasper", "Copy.ai", "ChatGPT", "Claude", "Mailchimp AI", "Hootsuite OwlyWriter"],
+    toolNames: ["Jasper", "Copy.ai", "Mailchimp AI", "Hootsuite OwlyWriter", "AdCreative.ai", "Canva Magic Studio"],
     tableHighlights: {
       Jasper: "Premium brand voice control",
       "Copy.ai": "Fast headline and ad variants",
-      ChatGPT: "Flexible end-to-end prompts",
-      Claude: "Polished long-form writing",
+      "AdCreative.ai": "Fast ad copy and creative angle generation",
+      "Canva Magic Studio": "Short-form copy plus visual context support",
       "Mailchimp AI": "Email campaign copy generation",
       "Hootsuite OwlyWriter": "Social caption drafting"
     },
@@ -275,7 +275,7 @@ export const categoryPages: CategoryPage[] = [
       { title: "Agent personal branding", description: "Publish consistent local authority content faster." }
     ],
     faqs: [
-      { question: "Which AI copy tool is best for real estate?", answer: "Jasper and ChatGPT are popular for flexibility; Copy.ai is strong for speed." },
+      { question: "Which AI copy tool is best for real estate?", answer: "Jasper is popular for brand depth, while Copy.ai is strong for speed and daily output." },
       { question: "Can AI tools write listing and email copy?", answer: "Yes, most support listing descriptions, emails, and ad variants." },
       { question: "How do I keep copy unique?", answer: "Use specific property facts, audience context, and your tone guidelines in prompts." },
       { question: "Are AI copy tools worth it for small teams?", answer: "Yes, they reduce production bottlenecks and improve publishing consistency." }
@@ -299,7 +299,7 @@ export const comparisonPages: ComparisonPage[] = [
     keywords: ["Jasper vs Copy.ai", "AI copywriter for real estate", "AI for property listings"],
     leftTool: "Jasper",
     rightTool: "Copy.ai",
-    alternativeToolNames: ["Jasper", "Copy.ai", "ChatGPT", "Claude", "Mailchimp AI"],
+    alternativeToolNames: ["Jasper", "Copy.ai", "Mailchimp AI", "AdCreative.ai", "Canva Magic Studio"],
     comparisonRows: [
       { feature: "Listing Description Quality", left: "Premium tone control", right: "Fast practical drafts", winner: "left" },
       { feature: "Template Variety", left: "Campaign frameworks", right: "Quick-start templates", winner: "tie" },

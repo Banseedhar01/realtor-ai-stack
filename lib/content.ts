@@ -8,14 +8,6 @@ type ToolInsight = {
 };
 
 const toolInsights: Record<string, ToolInsight> = {
-  ChatGPT: {
-    bestFor: "High-volume listing copy and client messaging",
-    keyFeatures: ["Prompt libraries", "Fast content drafts", "Campaign ideation"]
-  },
-  Claude: {
-    bestFor: "Long-form reports and nuanced client communication",
-    keyFeatures: ["Long context windows", "Structured writing style", "Policy-aware drafting"]
-  },
   Jasper: {
     bestFor: "Brand-consistent real estate copywriting",
     keyFeatures: ["Brand voice controls", "Template workflows", "Campaign-level consistency"]

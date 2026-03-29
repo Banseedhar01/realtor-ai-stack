@@ -1,19 +1,5 @@
 [
   {
-    "name": "ChatGPT",
-    "description": "Draft listing copy, client emails, and neighborhood summaries in minutes with custom prompts for US markets.",
-    "pricing": "Free plan, Plus from $20/mo",
-    "category": "general-ai-assistant",
-    "affiliateLink": "https://chatgpt.com/?utm_source=realestate-guide"
-  },
-  {
-    "name": "Claude",
-    "description": "Strong for long-form market reports, compliance-friendly drafts, and nuanced buyer-seller communication.",
-    "pricing": "Free plan, Pro from $20/mo",
-    "category": "general-ai-assistant",
-    "affiliateLink": "https://claude.ai/?utm_source=realestate-guide"
-  },
-  {
     "name": "Jasper",
     "description": "Brand-safe AI copy platform for high-converting property descriptions and ad campaigns.",
     "pricing": "Creator from $39/mo",
