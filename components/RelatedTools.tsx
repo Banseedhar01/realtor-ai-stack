@@ -40,12 +40,27 @@ export default function RelatedTools({ items }: RelatedToolsProps) {
           <Link
             key={item.slug}
             href={`/${item.slug}`}
-            className="block rounded-xl border border-slate-200 p-4 transition hover:border-primary-500 hover:bg-primary-50"
+            className="group block rounded-xl border border-slate-200 p-4 transition-all duration-200 hover:border-primary-500 hover:bg-gradient-to-r hover:from-primary-50 hover:to-white"
           >
-            <h3 className="text-base font-semibold text-primary-700">
-              {keywordAnchorText[item.slug] ?? `Explore ${item.title}`}
-            </h3>
-            <p className="mt-1 text-sm text-slate-600">{item.description}</p>
+            <div className="flex items-center justify-between gap-3">
+              <div className="min-w-0">
+                <h3 className="text-base font-semibold text-primary-700">
+                  {keywordAnchorText[item.slug] ?? `Explore ${item.title}`}
+                </h3>
+                <p className="mt-1 text-sm text-slate-600">{item.description}</p>
+              </div>
+              <svg
+                className="h-5 w-5 flex-shrink-0 text-slate-300 transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary-500"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
           </Link>
         ))}
       </div>

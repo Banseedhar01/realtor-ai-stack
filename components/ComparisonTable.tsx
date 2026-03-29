@@ -6,14 +6,14 @@ type ComparisonTableProps = {
 
 export default function ComparisonTable({ headers, rows, caption }: ComparisonTableProps) {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-soft">
+    <div className="table-scroll-wrapper overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-soft">
       <table className="min-w-full text-left text-sm">
         {caption ? (
           <caption className="bg-slate-50 px-4 py-3 text-left text-sm font-semibold text-slate-700">
             {caption}
           </caption>
         ) : null}
-        <thead className="bg-slate-50">
+        <thead className="bg-gradient-to-r from-slate-50 to-slate-100">
           <tr>
             {headers.map((header) => (
               <th key={header} className="px-4 py-3 font-semibold text-slate-900">
@@ -24,9 +24,17 @@ export default function ComparisonTable({ headers, rows, caption }: ComparisonTa
         </thead>
         <tbody>
           {rows.map((row, rowIndex) => (
-            <tr key={`${row[0]}-${rowIndex}`} className="border-t border-slate-100">
+            <tr
+              key={`${row[0]}-${rowIndex}`}
+              className={`border-t border-slate-100 transition-colors hover:bg-primary-50/40 ${rowIndex % 2 === 1 ? "bg-slate-50/50" : ""
+                }`}
+            >
               {row.map((cell, cellIndex) => (
-                <td key={`${cell}-${cellIndex}`} className="px-4 py-3 text-slate-700">
+                <td
+                  key={`${cell}-${cellIndex}`}
+                  className={`px-4 py-3 ${cellIndex === 0 ? "font-semibold text-slate-900" : "text-slate-700"
+                    }`}
+                >
                   {cell}
                 </td>
               ))}

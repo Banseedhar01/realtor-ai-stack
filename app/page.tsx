@@ -34,22 +34,42 @@ const marketStats = [
   {
     metric: "$404.9B",
     label: "Estimated AI in Real Estate Market (2026)",
-    context: "Industry analysts project strong global adoption across sales, valuation, and portfolio operations."
+    context: "Industry analysts project strong global adoption across sales, valuation, and portfolio operations.",
+    icon: (
+      <svg className="h-8 w-8 text-primary-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+      </svg>
+    )
   },
   {
     metric: "34.3%",
     label: "Projected CAGR",
-    context: "Growth is being driven by automation, data intelligence, and tighter enterprise workflows."
+    context: "Growth is being driven by automation, data intelligence, and tighter enterprise workflows.",
+    icon: (
+      <svg className="h-8 w-8 text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" />
+      </svg>
+    )
   },
   {
     metric: "+40%",
     label: "Lead Capture Improvement",
-    context: "AI-first lead response workflows frequently outperform manual-only intake models."
+    context: "AI-first lead response workflows frequently outperform manual-only intake models.",
+    icon: (
+      <svg className="h-8 w-8 text-primary-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><polyline points="16 11 18 13 22 9" />
+      </svg>
+    )
   },
   {
     metric: "-50%",
     label: "Response Time Reduction",
-    context: "Automated follow-up and triage help teams respond in minutes instead of hours."
+    context: "Automated follow-up and triage help teams respond in minutes instead of hours.",
+    icon: (
+      <svg className="h-8 w-8 text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+      </svg>
+    )
   }
 ];
 
@@ -139,29 +159,38 @@ export default function HomePage() {
   return (
     <>
       <SeoHead schemas={schemas} />
-      <section className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-900 p-8 text-white shadow-soft sm:p-12">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary-400/20 blur-3xl" />
-        <div className="pointer-events-none absolute -left-20 bottom-0 h-44 w-44 rounded-full bg-accent-400/20 blur-3xl" />
-        <p className="mb-3 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary-100">
+
+      {/* ── Hero Section ─────────────────────────────── */}
+      <section className="animate-fade-in-up relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-900 p-8 text-white shadow-soft sm:p-12">
+        {/* Animated Orbs */}
+        <div className="animate-pulse-glow pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary-400/20 blur-3xl" />
+        <div className="animate-float pointer-events-none absolute -left-20 bottom-0 h-48 w-48 rounded-full bg-accent-400/20 blur-3xl" />
+        <div className="animate-float pointer-events-none absolute right-1/3 top-1/2 h-32 w-32 rounded-full bg-primary-300/10 blur-2xl" style={{ animationDelay: "3s" }} />
+
+        <p className="relative mb-3 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary-100 backdrop-blur-sm">
           US Real Estate AI Playbook
         </p>
-        <h1 className="font-heading text-3xl font-extrabold leading-tight sm:text-5xl">
-          Best AI Tools for Real Estate Agents (2026)
+        <h1 className="relative font-heading text-3xl font-extrabold leading-tight sm:text-5xl">
+          Best AI Tools for Real Estate Agents{" "}
+          <span className="bg-gradient-to-r from-primary-300 to-accent-300 bg-clip-text text-transparent">(2026)</span>
         </h1>
-        <p className="mt-4 max-w-3xl text-base leading-7 text-slate-200 sm:text-lg">
+        <p className="relative mt-4 max-w-3xl text-base leading-7 text-slate-200 sm:text-lg">
           Build an AI stack that combines practical tools with agentic workflows. This guide helps
           US brokerages and teams choose what to implement first, how much to budget, and where to
           expect measurable ROI.
         </p>
-        <div className="mt-3 text-sm text-slate-300">
+        <div className="relative mt-3 text-sm text-slate-300">
           Last updated: March 2026 | Author: Avery Collins, US Real Estate AI Research Desk
         </div>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="relative mt-8 flex flex-wrap gap-3">
           <Link
             href="/ai-tools-for-lead-generation"
-            className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-5 py-3 text-sm font-bold text-white transition hover:from-primary-600 hover:to-primary-700"
+            className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-5 py-3 text-sm font-bold text-white transition-all duration-200 hover:from-primary-600 hover:to-primary-700 hover:shadow-glow-lg"
           >
             Explore Lead Gen Tools
+            <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
           </Link>
           <Link
             href="/jasper-vs-copy-ai"
@@ -172,6 +201,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Market Stats ─────────────────────────────── */}
       <section className="mt-14">
         <h2 className="font-heading text-3xl font-bold text-slate-950">
           Global Market Data and Statistics
@@ -181,8 +211,12 @@ export default function HomePage() {
           full AI workflows tied to growth, conversion, and operating efficiency.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {marketStats.map((item) => (
-            <article key={item.label} className="rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-primary-300">
+          {marketStats.map((item, index) => (
+            <article
+              key={item.label}
+              className={`animate-fade-in-up card-glow rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-soft transition hover:-translate-y-0.5 stagger-${index + 1}`}
+            >
+              <div className="mb-3">{item.icon}</div>
               <p className="font-heading text-3xl font-extrabold text-slate-950">{item.metric}</p>
               <h3 className="mt-2 text-sm font-semibold text-slate-900">{item.label}</h3>
               <p className="mt-2 text-sm text-slate-600">{item.context}</p>
@@ -191,6 +225,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Strategic Shift ──────────────────────────── */}
       <section className="mt-14 rounded-2xl border border-slate-200/90 bg-white/95 p-6 shadow-soft">
         <h2 className="font-heading text-3xl font-bold text-slate-950">
           The Strategic Shift in 2026
@@ -200,14 +235,18 @@ export default function HomePage() {
           where tools work together around sales, compliance, and operations.
         </p>
         <div className="mt-5 space-y-3">
-          {strategicShiftPoints.map((point) => (
-            <p key={point} className="rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-700">
-              {point}
-            </p>
+          {strategicShiftPoints.map((point, index) => (
+            <div key={point} className="flex items-start gap-3 rounded-xl bg-slate-50 px-4 py-3">
+              <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 text-[10px] font-bold text-primary-700">
+                {index + 1}
+              </span>
+              <p className="text-sm text-slate-700">{point}</p>
+            </div>
           ))}
         </div>
       </section>
 
+      {/* ── Agentic Solutions ────────────────────────── */}
       <section className="mt-14">
         <h2 className="font-heading text-3xl font-bold text-slate-950">
           Top 10 Agentic AI Solutions for Real Estate
@@ -218,17 +257,26 @@ export default function HomePage() {
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {topAgenticSolutions.map((solution, index) => (
-            <article key={solution.title} className="rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-primary-300">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-700">
-                Solution {index + 1}
-              </p>
-              <h3 className="mt-2 font-heading text-xl font-bold text-slate-950">{solution.title}</h3>
+            <article
+              key={solution.title}
+              className="card-glow rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-soft transition hover:-translate-y-0.5"
+            >
+              <div className="mb-2 flex items-center gap-2">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 text-xs font-bold text-white">
+                  {index + 1}
+                </span>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary-700">
+                  Solution
+                </p>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-slate-950">{solution.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{solution.summary}</p>
             </article>
           ))}
         </div>
       </section>
 
+      {/* ── Top Tools ────────────────────────────────── */}
       <section className="mt-14">
         <h2 className="font-heading text-3xl font-bold text-slate-950">Top 10 AI Tools for Realtors</h2>
         <p className="mt-3 max-w-3xl text-slate-600">
@@ -241,6 +289,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Comparison Table ─────────────────────────── */}
       <section className="mt-14">
         <h2 className="font-heading text-3xl font-bold text-slate-950">AI Tools Comparison Table</h2>
         <p className="mt-3 max-w-3xl text-slate-600">
@@ -255,48 +304,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Use Cases ────────────────────────────────── */}
       <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
         <h2 className="font-heading text-3xl font-bold text-slate-950">Real-World Use Cases</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <article className="rounded-xl border border-slate-200 p-4">
-            <h3 className="font-semibold text-slate-900">Lead Response Automation</h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Broker teams use AI assistants to respond to leads in minutes and route by location or budget.
-            </p>
-          </article>
-          <article className="rounded-xl border border-slate-200 p-4">
-            <h3 className="font-semibold text-slate-900">Listing Content Production</h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Agents generate MLS drafts, ad variants, and email follow-up copy in one workflow.
-            </p>
-          </article>
-          <article className="rounded-xl border border-slate-200 p-4">
-            <h3 className="font-semibold text-slate-900">CRM Follow-Up Consistency</h3>
-            <p className="mt-2 text-sm text-slate-600">
-              AI workflows keep contact records active and trigger reminders before opportunities go cold.
-            </p>
-          </article>
-          <article className="rounded-xl border border-slate-200 p-4">
-            <h3 className="font-semibold text-slate-900">Social Media at Scale</h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Teams repurpose one property tour into multiple posts, reels, and localized captions.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-        <h2 className="font-heading text-3xl font-bold text-slate-950">Implementation Roadmap</h2>
-        <div className="mt-5 space-y-3">
-          {implementationRoadmap.map((step, index) => (
-            <p key={step} className="rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-700">
-              <span className="mr-2 font-semibold text-slate-900">Step {index + 1}:</span>
-              {step}
-            </p>
+          {[
+            { title: "Lead Response Automation", desc: "Broker teams use AI assistants to respond to leads in minutes and route by location or budget." },
+            { title: "Listing Content Production", desc: "Agents generate MLS drafts, ad variants, and email follow-up copy in one workflow." },
+            { title: "CRM Follow-Up Consistency", desc: "AI workflows keep contact records active and trigger reminders before opportunities go cold." },
+            { title: "Social Media at Scale", desc: "Teams repurpose one property tour into multiple posts, reels, and localized captions." }
+          ].map((uc) => (
+            <article key={uc.title} className="rounded-xl border border-slate-200 p-4 transition hover:border-primary-200 hover:bg-primary-50/30">
+              <h3 className="font-semibold text-slate-900">{uc.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{uc.desc}</p>
+            </article>
           ))}
         </div>
       </section>
 
+      {/* ── Implementation Roadmap ────────────────────── */}
+      <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+        <h2 className="font-heading text-3xl font-bold text-slate-950">Implementation Roadmap</h2>
+        <div className="mt-5 space-y-3">
+          {implementationRoadmap.map((step, index) => (
+            <div key={step} className="flex items-start gap-3 rounded-xl bg-slate-50 px-4 py-3">
+              <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 text-xs font-bold text-white">
+                {index + 1}
+              </span>
+              <p className="text-sm text-slate-700">{step}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Cost Table ───────────────────────────────── */}
       <section className="mt-14">
         <h2 className="font-heading text-3xl font-bold text-slate-950">How Much Does It Cost?</h2>
         <p className="mt-3 max-w-3xl text-slate-600">
@@ -312,6 +353,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Explore by Use Case ──────────────────────── */}
       <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
         <h2 className="font-heading text-3xl font-bold text-slate-950">Explore by Use Case</h2>
         <p className="mt-3 text-slate-600">
@@ -322,21 +364,48 @@ export default function HomePage() {
             <Link
               key={page.slug}
               href={`/${page.slug}`}
-              className="rounded-xl border border-slate-200 p-4 transition hover:border-primary-500 hover:bg-primary-50"
+              className="group rounded-xl border border-slate-200 p-4 transition-all duration-200 hover:border-primary-500 hover:bg-gradient-to-r hover:from-primary-50 hover:to-white"
             >
-              <h3 className="font-heading text-lg font-bold text-slate-900">{page.h1}</h3>
+              <h3 className="font-heading text-lg font-bold text-slate-900 transition group-hover:text-primary-700">{page.h1}</h3>
               <p className="mt-2 text-sm text-slate-600">{page.description}</p>
             </Link>
           ))}
         </div>
       </section>
 
+      {/* ── FAQ ──────────────────────────────────────── */}
       <section className="mt-14">
         <FAQ items={homeFaqs} />
       </section>
 
+      {/* ── Related Tools ────────────────────────────── */}
       <section className="mt-14">
         <RelatedTools items={linkCards.slice(0, 6)} />
+      </section>
+
+      {/* ── Final CTA Banner ─────────────────────────── */}
+      <section className="mt-14 overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-primary-900 to-slate-950 p-8 text-center sm:p-12">
+        <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary-400/20 blur-3xl" />
+        <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+          Ready to Build Your AI Stack?
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm text-slate-300">
+          Start with one high-impact use case, measure results in 30 days, and expand from there.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Link
+            href="/ai-tools-for-lead-generation"
+            className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-3 text-sm font-bold text-white transition hover:from-primary-600 hover:to-primary-700 hover:shadow-glow-lg"
+          >
+            Get Started →
+          </Link>
+          <Link
+            href="/ai-tools-for-crm"
+            className="inline-flex items-center rounded-lg border border-white/30 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10"
+          >
+            Compare CRM Tools
+          </Link>
+        </div>
       </section>
     </>
   );
