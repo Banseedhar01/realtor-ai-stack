@@ -41,8 +41,8 @@ export default function Footer() {
       </div>
 
       {/* Link Columns */}
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
-        <div>
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4 sm:px-6 lg:px-8">
+        <div className="sm:col-span-2">
           <h2 className="font-heading text-xl font-bold text-white">AI Tools for Real Estate Agents</h2>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">
             Practical AI software recommendations for US realtors focused on lead generation, listing
