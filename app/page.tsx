@@ -135,6 +135,10 @@ const investmentRows = [
   ["Enterprise Build", "$100k-$200k+", "Custom valuation engines, compliance modules, private cloud deployment"]
 ];
 
+const SectionAccent = () => (
+  <span className="mr-2 inline-block h-6 w-1 translate-y-0.5 rounded-full bg-gradient-to-b from-primary-500 to-accent-500 align-middle" aria-hidden="true" />
+);
+
 export default function HomePage() {
   const topTools = getTopTools(10);
   const comparisonRows = topTools.map((tool) => [
@@ -197,6 +201,9 @@ export default function HomePage() {
             className="inline-flex items-center rounded-lg border border-white/40 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"
           >
             Compare Jasper vs Copy.ai
+            <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
           </Link>
         </div>
       </section>
@@ -204,6 +211,7 @@ export default function HomePage() {
       {/* ── Market Stats ─────────────────────────────── */}
       <section className="mt-14">
         <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
           Global Market Data and Statistics
         </h2>
         <p className="mt-3 max-w-3xl text-slate-600">
@@ -216,8 +224,8 @@ export default function HomePage() {
               key={item.label}
               className={`animate-fade-in-up card-glow rounded-2xl border border-slate-200/90 bg-white/95 p-5 shadow-soft transition hover:-translate-y-0.5 stagger-${index + 1}`}
             >
-              <div className="mb-3">{item.icon}</div>
-              <p className="font-heading text-3xl font-extrabold text-slate-950">{item.metric}</p>
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">{item.icon}</div>
+              <p className="font-heading text-4xl font-extrabold tracking-tight text-slate-950">{item.metric}</p>
               <h3 className="mt-2 text-sm font-semibold text-slate-900">{item.label}</h3>
               <p className="mt-2 text-sm text-slate-600">{item.context}</p>
             </article>
@@ -228,6 +236,7 @@ export default function HomePage() {
       {/* ── Strategic Shift ──────────────────────────── */}
       <section className="mt-14 rounded-2xl border border-slate-200/90 bg-white/95 p-6 shadow-soft">
         <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
           The Strategic Shift in 2026
         </h2>
         <p className="mt-3 text-slate-600">
@@ -236,8 +245,8 @@ export default function HomePage() {
         </p>
         <div className="mt-5 space-y-3">
           {strategicShiftPoints.map((point, index) => (
-            <div key={point} className="flex items-start gap-3 rounded-xl bg-slate-50 px-4 py-3">
-              <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 text-[10px] font-bold text-primary-700">
+            <div key={point} className="flex items-start gap-3 rounded-xl bg-slate-50 px-4 py-3 transition-colors hover:bg-slate-100">
+              <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-[10px] font-bold text-white">
                 {index + 1}
               </span>
               <p className="text-sm text-slate-700">{point}</p>
@@ -249,6 +258,7 @@ export default function HomePage() {
       {/* ── Agentic Solutions ────────────────────────── */}
       <section className="mt-14">
         <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
           Top 10 Agentic AI Solutions for Real Estate
         </h2>
         <p className="mt-3 max-w-3xl text-slate-600">
@@ -278,7 +288,10 @@ export default function HomePage() {
 
       {/* ── Top Tools ────────────────────────────────── */}
       <section className="mt-14">
-        <h2 className="font-heading text-3xl font-bold text-slate-950">Top 10 AI Tools for Realtors</h2>
+        <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
+          Top 10 AI Tools for Realtors
+        </h2>
         <p className="mt-3 max-w-3xl text-slate-600">
           If you want immediate implementation wins, these are the practical tools teams deploy first.
         </p>
@@ -291,7 +304,10 @@ export default function HomePage() {
 
       {/* ── Comparison Table ─────────────────────────── */}
       <section className="mt-14">
-        <h2 className="font-heading text-3xl font-bold text-slate-950">AI Tools Comparison Table</h2>
+        <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
+          AI Tools Comparison Table
+        </h2>
         <p className="mt-3 max-w-3xl text-slate-600">
           Use this snapshot to shortlist tools by pricing model and strongest use case.
         </p>
@@ -306,7 +322,10 @@ export default function HomePage() {
 
       {/* ── Use Cases ────────────────────────────────── */}
       <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-        <h2 className="font-heading text-3xl font-bold text-slate-950">Real-World Use Cases</h2>
+        <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
+          Real-World Use Cases
+        </h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
             { title: "Lead Response Automation", desc: "Broker teams use AI assistants to respond to leads in minutes and route by location or budget." },
@@ -324,7 +343,10 @@ export default function HomePage() {
 
       {/* ── Implementation Roadmap ────────────────────── */}
       <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-        <h2 className="font-heading text-3xl font-bold text-slate-950">Implementation Roadmap</h2>
+        <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
+          Implementation Roadmap
+        </h2>
         <div className="mt-5 space-y-3">
           {implementationRoadmap.map((step, index) => (
             <div key={step} className="flex items-start gap-3 rounded-xl bg-slate-50 px-4 py-3">
@@ -339,7 +361,10 @@ export default function HomePage() {
 
       {/* ── Cost Table ───────────────────────────────── */}
       <section className="mt-14">
-        <h2 className="font-heading text-3xl font-bold text-slate-950">How Much Does It Cost?</h2>
+        <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
+          How Much Does It Cost?
+        </h2>
         <p className="mt-3 max-w-3xl text-slate-600">
           Estimated 2026 ranges for real estate AI implementation. Actual pricing depends on
           integrations, data quality, and security requirements.
@@ -355,7 +380,10 @@ export default function HomePage() {
 
       {/* ── Explore by Use Case ──────────────────────── */}
       <section className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
-        <h2 className="font-heading text-3xl font-bold text-slate-950">Explore by Use Case</h2>
+        <h2 className="font-heading text-3xl font-bold text-slate-950">
+          <SectionAccent />
+          Explore by Use Case
+        </h2>
         <p className="mt-3 text-slate-600">
           Jump into focused guides built around real estate workflows.
         </p>
@@ -364,9 +392,19 @@ export default function HomePage() {
             <Link
               key={page.slug}
               href={`/${page.slug}`}
-              className="group rounded-xl border border-slate-200 p-4 transition-all duration-200 hover:border-primary-500 hover:bg-gradient-to-r hover:from-primary-50 hover:to-white"
+              className="group flex flex-col rounded-xl border border-slate-200 bg-white p-4 transition-all duration-200 hover:border-primary-400 hover:bg-gradient-to-br hover:from-primary-50 hover:to-white hover:shadow-sm"
             >
-              <h3 className="font-heading text-lg font-bold text-slate-900 transition group-hover:text-primary-700">{page.h1}</h3>
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-heading text-base font-bold text-slate-900 transition group-hover:text-primary-700">{page.h1}</h3>
+                <svg
+                  className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-300 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-primary-500"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
               <p className="mt-2 text-sm text-slate-600">{page.description}</p>
             </Link>
           ))}
@@ -384,15 +422,16 @@ export default function HomePage() {
       </section>
 
       {/* ── Final CTA Banner ─────────────────────────── */}
-      <section className="mt-14 overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-primary-900 to-slate-950 p-8 text-center sm:p-12">
+      <section className="relative mt-14 overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-primary-900 to-slate-950 p-8 text-center sm:p-12">
         <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary-400/20 blur-3xl" />
-        <h2 className="font-heading text-2xl font-bold text-white sm:text-3xl">
+        <div className="pointer-events-none absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-accent-400/15 blur-3xl" />
+        <h2 className="relative font-heading text-2xl font-bold text-white sm:text-3xl">
           Ready to Build Your AI Stack?
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-sm text-slate-300">
+        <p className="relative mx-auto mt-3 max-w-xl text-sm text-slate-300">
           Start with one high-impact use case, measure results in 30 days, and expand from there.
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
+        <div className="relative mt-6 flex flex-wrap justify-center gap-3">
           <Link
             href="/ai-tools-for-lead-generation"
             className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-3 text-sm font-bold text-white transition hover:from-primary-600 hover:to-primary-700 hover:shadow-glow-lg"

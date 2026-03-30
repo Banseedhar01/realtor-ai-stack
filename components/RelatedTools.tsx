@@ -30,6 +30,7 @@ export default function RelatedTools({ items }: RelatedToolsProps) {
   return (
     <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
       <h2 className="font-heading text-2xl font-bold text-slate-950">
+        <span className="mr-2 inline-block h-5 w-1 translate-y-0.5 rounded-full bg-gradient-to-b from-primary-500 to-accent-500 align-middle" aria-hidden="true" />
         Related AI Tools for Real Estate
       </h2>
       <p className="mt-2 text-sm text-slate-600">

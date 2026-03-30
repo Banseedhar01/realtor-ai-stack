@@ -12,16 +12,16 @@ function FaqAccordionItem({ item, index }: { item: FaqItem; index: number }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="rounded-xl border border-slate-200 transition-colors hover:border-primary-200">
+    <div className={`rounded-xl border transition-colors hover:border-primary-200 ${open ? "faq-item-open" : "border-slate-200 bg-white"}`}>
       <button
         onClick={() => setOpen(!open)}
         className="flex w-full items-center gap-3 px-4 py-3.5 text-left"
         aria-expanded={open}
       >
-        <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary-50 text-xs font-bold text-primary-700">
+        <span className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold transition-colors ${open ? "bg-primary-600 text-white" : "bg-primary-100 text-primary-700"}`}>
           {index + 1}
         </span>
-        <span className="flex-1 font-semibold text-slate-900">{item.question}</span>
+        <span className="flex-1 text-sm font-semibold text-slate-900 sm:text-base">{item.question}</span>
         <svg
           className={`faq-chevron h-5 w-5 text-slate-400 ${open ? "open" : ""}`}
           viewBox="0 0 20 20"
@@ -36,7 +36,7 @@ function FaqAccordionItem({ item, index }: { item: FaqItem; index: number }) {
       </button>
       <div className={`faq-answer ${open ? "open" : ""}`}>
         <div>
-          <p className="px-4 pb-4 pl-[3.25rem] text-sm leading-6 text-slate-600">{item.answer}</p>
+          <p className="px-4 pb-5 pl-[3.25rem] pt-1 text-sm leading-7 text-slate-600">{item.answer}</p>
         </div>
       </div>
     </div>

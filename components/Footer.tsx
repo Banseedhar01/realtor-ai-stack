@@ -13,7 +13,9 @@ const comparisonLinks = comparisonPages.map((page) => ({
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-slate-800 bg-gradient-to-b from-slate-950 to-slate-900 text-slate-200">
+    <footer className="relative mt-24 bg-gradient-to-b from-slate-950 to-slate-900 text-slate-200">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-primary-500/60 to-transparent" aria-hidden="true" />
+
       <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="relative overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-900/70 p-6 shadow-soft sm:p-8">
           <div className="pointer-events-none absolute -left-12 -top-12 h-32 w-32 rounded-full bg-primary-500/20 blur-3xl" />
@@ -34,13 +36,13 @@ export default function Footer() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/ai-tools-for-lead-generation"
-                className="rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-primary-600 hover:to-primary-700"
+                className="rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-primary-600 hover:to-primary-700 hover:shadow-glow"
               >
                 Explore Lead Tools
               </Link>
               <Link
                 href="/jasper-vs-copy-ai"
-                className="rounded-lg border border-slate-600 bg-slate-900/60 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-primary-500 hover:text-primary-300"
+                className="rounded-lg border border-slate-600 bg-slate-900/60 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-primary-500 hover:bg-slate-800/60 hover:text-primary-300"
               >
                 View Top Comparison
               </Link>
@@ -71,7 +73,7 @@ export default function Footer() {
                     href={item.href}
                     className="group inline-flex items-center gap-2 text-sm text-slate-300 transition hover:text-primary-300"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-slate-600 transition group-hover:bg-primary-400" />
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-700 transition-colors group-hover:bg-primary-400" />
                     {item.label}
                   </Link>
                 </li>
@@ -90,7 +92,7 @@ export default function Footer() {
                     href={item.href}
                     className="group inline-flex items-center gap-2 text-sm text-slate-300 transition hover:text-primary-300"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-slate-600 transition group-hover:bg-primary-400" />
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-700 transition-colors group-hover:bg-primary-400" />
                     {item.label}
                   </Link>
                 </li>

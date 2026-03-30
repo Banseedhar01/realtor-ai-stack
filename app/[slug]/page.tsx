@@ -205,7 +205,7 @@ const renderComparisonContent = (page: ComparisonPage) => {
         </article>
       </section>
 
-      <section className="mt-10 overflow-hidden rounded-2xl border border-primary-200 bg-gradient-to-r from-primary-50 to-accent-50 p-6">
+      <section className="accent-bar-top mt-10 overflow-hidden rounded-2xl border border-primary-200 bg-gradient-to-r from-primary-50 via-white to-accent-50/60 p-6">
         <h2 className="font-heading text-2xl font-bold text-slate-950">Final Verdict</h2>
         <p className="mt-2 text-slate-700">{page.verdict}</p>
       </section>
@@ -253,7 +253,7 @@ export default function DynamicSeoPage({ params }: PageProps) {
         <Breadcrumbs items={breadcrumbs} />
 
         {/* Enhanced Header */}
-        <header className="relative max-w-4xl overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-primary-50/30 to-accent-50/20 p-6 shadow-soft sm:p-8">
+        <header className="accent-bar-top relative max-w-4xl overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-primary-50/30 to-accent-50/20 p-6 shadow-soft sm:p-8">
           <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary-200/30 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-accent-200/20 blur-2xl" />
           <h1 className="relative font-heading text-3xl font-extrabold text-slate-950 sm:text-5xl">{page.h1}</h1>
@@ -267,25 +267,29 @@ export default function DynamicSeoPage({ params }: PageProps) {
             Why AI Matters for This Real Estate Workflow
           </h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl bg-slate-50 p-4">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
-                <svg className="h-5 w-5 text-rose-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                </svg>
+            <div className="rounded-xl border border-rose-100 bg-rose-50/60 p-4">
+              <h3 className="flex items-center gap-2 text-base font-semibold text-slate-900">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-rose-100">
+                  <svg className="h-4 w-4 text-rose-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                </span>
                 Common Agent Pain Points
               </h3>
-              <p className="mt-2 text-slate-600">
+              <p className="mt-2 text-sm text-slate-600">
                 US agents usually struggle with response speed, repetitive manual work, and inconsistent message quality.
               </p>
             </div>
-            <div className="rounded-xl bg-accent-50/50 p-4">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
-                <svg className="h-5 w-5 text-accent-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
+            <div className="rounded-xl border border-accent-200 bg-accent-50/60 p-4">
+              <h3 className="flex items-center gap-2 text-base font-semibold text-slate-900">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent-100">
+                  <svg className="h-4 w-4 text-accent-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </span>
                 Where AI Improves Results
               </h3>
-              <p className="mt-2 text-slate-600">
+              <p className="mt-2 text-sm text-slate-600">
                 With the right setup, AI improves consistency, shortens execution time, and increases qualified conversations.
               </p>
             </div>
@@ -335,12 +339,13 @@ export default function DynamicSeoPage({ params }: PageProps) {
           <RelatedTools items={relatedPages} />
         </section>
 
-        <section className="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-r from-white via-primary-50/40 to-accent-50/30 p-6 shadow-soft">
-          <h2 className="font-heading text-2xl font-bold text-slate-950">Next Step for Your Team</h2>
-          <p className="mt-2 text-slate-600">
+        <section className="relative mt-10 overflow-hidden rounded-2xl border border-primary-200 bg-gradient-to-br from-primary-50 via-white to-accent-50/40 p-6 shadow-soft sm:p-8">
+          <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-primary-300/20 blur-2xl" aria-hidden="true" />
+          <h2 className="relative font-heading text-xl font-bold text-slate-950 sm:text-2xl">Next Step for Your Team</h2>
+          <p className="relative mt-2 text-slate-600">
             Shortlist 2 tools, run a 14-day pilot, and compare response time plus conversion metrics.
           </p>
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="relative mt-4 flex flex-wrap gap-3">
             <Link
               href="/ai-tools-for-lead-generation"
               className="inline-flex items-center rounded-lg bg-gradient-to-r from-primary-600 to-primary-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:from-primary-700 hover:to-primary-800 hover:shadow-glow"
@@ -349,7 +354,7 @@ export default function DynamicSeoPage({ params }: PageProps) {
             </Link>
             <Link
               href="/ai-tools-for-crm"
-              className="rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-primary-500 hover:text-primary-700"
+              className="rounded-lg border border-slate-200 px-4 py-2.5 text-sm font-medium text-slate-500 transition hover:border-primary-300 hover:text-primary-600"
             >
               Compare AI CRM Tools
             </Link>
@@ -365,7 +370,7 @@ export default function DynamicSeoPage({ params }: PageProps) {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Enhanced Header */}
-      <header className="relative max-w-4xl overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-primary-50/30 to-accent-50/20 p-6 shadow-soft sm:p-8">
+      <header className="accent-bar-top relative max-w-4xl overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-primary-50/30 to-accent-50/20 p-6 shadow-soft sm:p-8">
         <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary-200/30 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-accent-200/20 blur-2xl" />
         <h1 className="relative font-heading text-3xl font-extrabold text-slate-950 sm:text-5xl">{page.h1}</h1>

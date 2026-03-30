@@ -318,3 +318,44 @@ body {
 .mobile-nav-panel.open {
   transform: translateX(0);
 }
+
+/* ── Accent Bar Top ────────────────────────────────── */
+
+.accent-bar-top {
+  position: relative;
+}
+
+.accent-bar-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(90deg, #1c7ed6 0%, #059669 100%);
+  z-index: 1;
+}
+
+/* ── FAQ Open State ────────────────────────────────── */
+
+.faq-item-open {
+  background-color: #f8faff;
+  border-color: #bcdcff !important;
+}
+
+/* ── Table Label Column ────────────────────────────── */
+
+.table-label-cell {
+  position: relative;
+}
+
+.table-label-cell::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e2e8f0;
+}
